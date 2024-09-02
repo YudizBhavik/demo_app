@@ -13,7 +13,7 @@
         android:theme="@style/Base.Theme.YudizApplication"
         tools:targetApi="34">
         <activity
-            android:name=".Second_Task"
+            android:name=".layout.Second_Task"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,11 +22,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FirstScreen"
+            android:name=".activity.FirstScreen"
             android:exported="false">
         </activity>
         <activity
-            android:name=".SecondActivity"
+            android:name=".activity.SecondActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

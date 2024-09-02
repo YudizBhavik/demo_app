@@ -1,4 +1,4 @@
-package com.example.yudizapplication
+package com.example.yudizapplication.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,13 +6,13 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import kotlin.math.log
+import com.example.yudizapplication.R
 
 class FirstScreen : AppCompatActivity() {
 
-    private lateinit var editText1: EditText
-    private lateinit var editText2: EditText
-    private lateinit var submitButton: Button
+    lateinit var editText1: EditText
+    lateinit var editText2: EditText
+    lateinit var submitButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

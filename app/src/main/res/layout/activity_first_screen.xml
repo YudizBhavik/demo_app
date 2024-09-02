@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:src="@drawable/logo_yudiz"/>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:textColor="@color/black"
+        android:background="@drawable/et_style"
+        android:layout_width="355dp"
+        android:textColorHint="@color/black"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textStyle="bold"
+        android:hint="Enter First value" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:background="@drawable/et_style"
+        android:layout_width="355dp"
+        android:textColorHint="@color/black"
+        android:layout_below="@id/editText1"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:hint="Enter Second value" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:background="#66BB6A"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/editText2"
+        android:layout_marginTop="30dp" />
+
+</RelativeLayout>

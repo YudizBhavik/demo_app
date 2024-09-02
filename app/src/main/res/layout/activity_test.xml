@@ -1,0 +1,69 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/black"
+        android:id="@+id/frame"
+        android:layout_width="100dp"
+        android:layout_height="56dp">
+
+        <FrameLayout
+            android:background="@color/teal_200"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"/>
+
+        <FrameLayout
+            android:layout_weight="2"
+            app:layout_constraintEnd_toEndOf="@+id/frame"
+            app:layout_constraintTop_toBottomOf="@id/frame"
+            android:background="@android:color/darker_gray"
+            android:layout_width="0dp"
+            android:layout_height="40dp"/>
+        <FrameLayout
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="@+id/frame"
+            app:layout_constraintTop_toBottomOf="@id/frame"
+            android:background="@color/teal_200"
+            android:layout_width="0dp"
+            android:layout_height="40dp"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_bhavik"
+        app:layout_constraintEnd_toEndOf="@+id/frame"
+        app:layout_constraintTop_toBottomOf="@id/frame"
+        android:background="@color/teal_200"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <FrameLayout
+        android:id="@+id/frame_umang"
+        android:background="@android:color/holo_red_dark"
+        app:layout_constraintStart_toEndOf="@id/frame_bhavik"
+        app:layout_constraintTop_toTopOf="@id/frame_bhavik"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <FrameLayout
+        app:layout_constraintTop_toTopOf="@id/frame_umang"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/frame_sid"
+        android:background="@android:color/holo_blue_light"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

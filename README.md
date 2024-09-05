@@ -40,5 +40,5 @@ Follow these steps to get the project up and running:
 Clone the repository to your local machine using Git:
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/YudizBhavik/demo_app.git
 cd Yudiz

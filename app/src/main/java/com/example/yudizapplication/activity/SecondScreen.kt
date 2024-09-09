@@ -13,8 +13,8 @@ class SecondActivity : AppCompatActivity() {
         setContentView(R.layout.activity_second_screen)
         Log.d("SecondActivity", "SecondActivity onCreate called")
 
-        val  textView1 = findViewById(R.id.textView1) as TextView
-        val textView2 = findViewById(R.id.textView2) as TextView
+        val  textView1: TextView = findViewById(R.id.textView1)
+        val textView2: TextView = findViewById(R.id.textView2)
         
         val text1 = intent.getStringExtra("TEXT1")
         val text2 = intent.getStringExtra("TEXT2")

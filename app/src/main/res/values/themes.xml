@@ -4,6 +4,9 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
-
+    <style name="android_button_checkBox">
+        <item name="android:button">@drawable/check_box_selector</item>
+    </style>
     <style name="Theme.YudizApplication" parent="Base.Theme.YudizApplication" />
+
 </resources>

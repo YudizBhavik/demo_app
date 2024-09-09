@@ -5,6 +5,25 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".viewpager.fragment.RecipeScreen">
+    tools:context=".viewpager.fragment.RecipeScreen2">
+
+    <com.google.android.material.tabs.TabLayout
+        app:tabIndicatorAnimationMode="elastic"
+        android:id="@+id/my_tab_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/my_view_Page"
+        app:layout_constraintTop_toBottomOf="@id/my_tab_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

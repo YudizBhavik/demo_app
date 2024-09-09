@@ -1,5 +1,6 @@
 package com.example.yudizapplication.activity
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -14,6 +15,7 @@ class FirstScreen : AppCompatActivity() {
     lateinit var editText2: EditText
     lateinit var submitButton: Button
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first_screen)
@@ -30,7 +32,7 @@ class FirstScreen : AppCompatActivity() {
 
             Log.d("FirstScreen", "Submit button clicked")
 
-            val intent = Intent(this, SecondActivity::class.java)
+            intent = Intent(this, SecondActivity::class.java)
                 intent.putExtra("TEXT1", text1)
                 intent.putExtra("TEXT2", text2)
                 startActivity(intent)

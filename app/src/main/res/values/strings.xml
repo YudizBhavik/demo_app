@@ -15,4 +15,37 @@
     <string name="frame_75">Frame(75)</string>
     <string name="frame_50">Frame(50)</string>
     <string name="frame_25">Frame(25)</string>
+    <string name="activity">1. Activity</string>
+    <string name="layout">2. Layout</string>
+    <string name="views">3. Views</string>
+    <string name="enter_your_first_name">First Name</string>
+    <string name="enter_first_name">Enter First Name</string>
+
+    <string name="enter_your_last_name">Last Name</string>
+    <string name="enter_last_name">Enter Last Name</string>
+    <string name="gender">Select Gender\t</string>
+    <string name="dob">Date of Birth\t</string>
+    <string name="enter_date_of_birth">Enter Date of Birth</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="enter_your_phone_number">Enter Phone Number</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_pass">Enter Password</string>
+    <string name="enter_adress">Enter Address</string>
+    <string name="enter_your_address">Enter Your Address</string>
+    <string name="t_c">Double check your data in the above form</string>
+    <string name="t_c_check">Terms and Conditions Apply</string>
+    <string name="banner_image">banner_image</string>
+    <string name="hello_nyudiz_fam">Hello, \nYudiz Fam.!!</string>
+    <string name="hello_nyudiz">Hello, Yudiz Fam.!!</string>
+    <string name="radio_female">Female</string>
+    <string name="radio_male">Male</string>
+    <string name="radio_another">Another</string>
+    <string name="txt_address">Address</string>
+    <string name="btn_submit">Submit</string>
+    <string name="_4_selector">4. Selector</string>
+    <string name="_5_selector">5. ViewPagger</string>
+    <string name="let_s_login">Let\'s Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="weather_data">Weather Data</string>
 </resources>

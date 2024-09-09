@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".viewpager.fragment.DinnerFragment">
+    tools:context=".viewpager.fragment.BreakfastFragment">
 
     <ListView
-        android:id="@+id/List_Dinner"
+        android:id="@+id/List_breakfast"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_width="wrap_content"

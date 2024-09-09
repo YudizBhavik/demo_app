@@ -3,8 +3,83 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@drawable/bg_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".OnBoardingScreen">
 
+    <ImageView
+        android:id="@+id/yudiz_logo"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img"/>
+
+    <Button
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:id="@+id/activity"
+        android:text="@string/activity"
+        app:layout_constraintTop_toBottomOf="@+id/yudiz_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="100dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bt_style"/>
+    <Button
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:id="@+id/layout"
+        android:text="@string/layout"
+       android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/activity"
+        app:layout_constraintTop_toBottomOf="@+id/activity"
+        android:layout_marginBottom="100dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bt_style"/>
+    <Button
+        android:id="@+id/view"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/layout"
+        app:layout_constraintTop_toBottomOf="@+id/layout"
+        android:layout_marginBottom="100dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/views"
+        android:background="@drawable/bt_style"/>
+    <Button
+        android:hapticFeedbackEnabled="true"
+        android:id="@+id/selector"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        android:layout_marginBottom="100dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/_4_selector"
+        android:background="@drawable/bt_style"/>
+    <Button
+        android:hapticFeedbackEnabled="true"
+        android:id="@+id/viewpagger"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/selector"
+        app:layout_constraintTop_toBottomOf="@+id/selector"
+        android:layout_marginBottom="100dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/_5_selector"
+        android:background="@drawable/bt_style"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

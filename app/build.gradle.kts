@@ -39,6 +39,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.view.pager)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

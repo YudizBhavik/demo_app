@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.YudizApplication" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+         <item name="android:statusBarColor">#FFFFFF</item>
     </style>
     <style name="android_button_checkBox">
         <item name="android:button">@drawable/check_box_selector</item>

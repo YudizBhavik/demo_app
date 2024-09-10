@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.yudizapplication.OnBoardingScreen
 import com.example.yudizapplication.R
 import com.example.yudizapplication.activity.FirstScreen
+import com.example.yudizapplication.coordinator.CoordinatorScreen
 import com.example.yudizapplication.layout.Second_Task
 import com.example.yudizapplication.recyclerview.model.PersonInformation
 import com.example.yudizapplication.selector.LoginScreen
@@ -24,10 +25,15 @@ class OnBoardingScreen2 : AppCompatActivity() {
         setContentView(R.layout.activity_on_boarding_screen2)
 
        var recyclerview = findViewById<Button>(R.id.recyclerView_Btn)
+       var btn_coordinator = findViewById<Button>(R.id.btn_coordinator)
        var fab_btn_back = findViewById<View>(R.id.fab_btn_back)
 
         recyclerview.setOnClickListener {
             intent = Intent(applicationContext, PersonInformation::class.java)
+            startActivity(intent)
+        }
+        btn_coordinator.setOnClickListener {
+            intent = Intent(applicationContext, CoordinatorScreen::class.java)
             startActivity(intent)
         }
 

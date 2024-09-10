@@ -13,6 +13,7 @@
         android:theme="@style/Base.Theme.YudizApplication"
         tools:targetApi="34">
         <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:name=".coordinator.CoordinatorScreen"
             android:exported="false" />
         <activity

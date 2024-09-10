@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/Scroll_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".views.RegistrationForm"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:background="@color/white"
     android:layout_width="match_parent"
@@ -26,6 +26,8 @@
         android:contentDescription="@string/banner_image"
         android:scaleType="centerCrop"
         android:background="@drawable/bg_banner"/>
+
+
 
     <TextView
         app:layout_constraintTop_toTopOf="parent"
@@ -144,39 +146,52 @@
         android:layout_marginTop="10dp"/>
 
     <RadioGroup
+        android:checkedButton="@id/banner"
         app:layout_constraintTop_toBottomOf="@+id/gender"
         android:layout_marginStart="25sp"
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <RadioButton
-            android:layout_marginTop="5dp"
-            android:buttonTint="@color/black"
-            android:textColor="@color/black"
-            android:textSize="16sp"
             android:id="@+id/radio_male"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/radio_male"/>
-        <RadioButton
             android:layout_marginTop="5dp"
             android:buttonTint="@color/black"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:text="@string/radio_male"
             android:textColor="@color/black"
             android:textSize="16sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
             android:id="@+id/radio_female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/radio_female"/>
-        <RadioButton
             android:layout_marginTop="5dp"
             android:buttonTint="@color/black"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:text="@string/radio_female"
             android:textColor="@color/black"
             android:textSize="16sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
             android:id="@+id/radio_another"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/radio_another"/>
+            android:layout_marginTop="5dp"
+            android:buttonTint="@color/black"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:text="@string/radio_another"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:ignore="TouchTargetSizeCheck" />
     </RadioGroup>
     <TextView
         app:layout_constraintTop_toBottomOf="@+id/gender"
@@ -268,16 +283,18 @@
         android:hint="@string/enter_your_address" />
 
     <CheckBox
+        android:layout_marginStart="20sp"
+        android:id="@+id/t_c"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
         android:buttonTint="@color/black"
+        android:text="@string/t_c"
         android:textColor="@color/black"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@id/txt_address"
         app:layout_constraintTop_toBottomOf="@id/editText_address"
-        android:id="@+id/t_c"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/t_c"
-        android:layout_marginTop="5dp"
-        android:textSize="14sp" />
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         app:layout_constraintTop_toBottomOf="@+id/t_c"

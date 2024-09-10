@@ -44,6 +44,7 @@
     <string name="btn_submit">Submit</string>
     <string name="_4_selector">4. Selector</string>
     <string name="_5_selector">5. ViewPagger</string>
+    <string name="_6_recyclerview">6. RecyclerView</string>
     <string name="let_s_login">Let\'s Login</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

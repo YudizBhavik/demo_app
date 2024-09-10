@@ -8,78 +8,92 @@
     android:layout_height="match_parent"
     tools:context=".OnBoardingScreen">
 
+    <!-- Original Buttons -->
     <ImageView
         android:id="@+id/yudiz_logo"
         android:layout_marginTop="100dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/img"/>
 
     <Button
+        android:id="@+id/btn_activity"
         android:layout_marginTop="50dp"
         android:textStyle="bold"
         android:textSize="15sp"
-        android:id="@+id/activity"
         android:text="@string/activity"
         app:layout_constraintTop_toBottomOf="@+id/yudiz_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="100dp"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:background="@drawable/bt_style"/>
+
     <Button
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:id="@+id/layout"
-        android:text="@string/layout"
-       android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/activity"
-        app:layout_constraintTop_toBottomOf="@+id/activity"
-        android:layout_marginBottom="100dp"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bt_style"/>
-    <Button
-        android:id="@+id/view"
-        android:textStyle="bold"
-        android:textSize="15sp"
+        android:id="@+id/btn_layout"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/layout"
-        app:layout_constraintTop_toBottomOf="@+id/layout"
-        android:layout_marginBottom="100dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:text="@string/layout"
+        app:layout_constraintStart_toStartOf="@+id/btn_activity"
+        app:layout_constraintTop_toBottomOf="@+id/btn_activity"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bt_style"/>
+
+    <Button
+        android:id="@+id/btn_view"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/btn_layout"
+        app:layout_constraintTop_toBottomOf="@+id/btn_layout"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@string/views"
         android:background="@drawable/bt_style"/>
+
     <Button
+        android:id="@+id/btn_selector"
         android:hapticFeedbackEnabled="true"
-        android:id="@+id/selector"
         android:textStyle="bold"
         android:textSize="15sp"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        android:layout_marginBottom="100dp"
+        app:layout_constraintStart_toStartOf="@+id/btn_view"
+        app:layout_constraintTop_toBottomOf="@+id/btn_view"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@string/_4_selector"
         android:background="@drawable/bt_style"/>
+
     <Button
+        android:id="@+id/btn_viewpagger"
         android:hapticFeedbackEnabled="true"
-        android:id="@+id/viewpagger"
         android:textStyle="bold"
         android:textSize="15sp"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/selector"
-        app:layout_constraintTop_toBottomOf="@+id/selector"
-        android:layout_marginBottom="100dp"
+        app:layout_constraintStart_toStartOf="@+id/btn_selector"
+        app:layout_constraintTop_toBottomOf="@+id/btn_selector"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@string/_5_selector"
         android:background="@drawable/bt_style"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:rippleColor="@color/gray"
+        android:layout_marginTop="50dp"
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        app:fabSize="normal"
+        android:src="@drawable/baseline_navigate_next_24"
+        app:maxImageSize="50dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_viewpagger"
+        app:layout_constraintStart_toStartOf="@id/btn_viewpagger"
+        app:layout_constraintEnd_toEndOf="@id/btn_viewpagger"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

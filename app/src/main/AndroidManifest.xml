@@ -13,16 +13,32 @@
         android:theme="@style/Base.Theme.YudizApplication"
         tools:targetApi="34">
         <activity
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:name=".viewpager.fragment.RecipeScreen2"
+            android:name=".coordinator.CoordinatorScreen"
             android:exported="false" />
+        <activity
+            android:name=".views.OnBoardingScreen2"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".recyclerview.model.DetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".recyclerview.model.PersonInformation"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".viewpager.fragment.RecipeScreen2"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".viewpager.RecipeScreen"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".viewpager.OnBordingViewpager"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.YudizApplication" />
         <activity
             android:name=".viewpager.WeatherInfo"
             android:exported="false"
@@ -32,7 +48,8 @@
             android:exported="false" />
         <activity
             android:name=".OnBoardingScreen"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.YudizApplication">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

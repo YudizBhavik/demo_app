@@ -28,6 +28,8 @@ androidx-activity = { group = "androidx.activity", name = "activity", version.re
 view-pager = { group= "androidx.viewpager2", name = "viewpager2", version.ref = "viewPager2" }
 
 
+
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

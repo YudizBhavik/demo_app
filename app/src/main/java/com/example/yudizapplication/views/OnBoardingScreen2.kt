@@ -15,6 +15,7 @@ import com.example.yudizapplication.coordinator.CoordinatorScreen
 import com.example.yudizapplication.layout.Second_Task
 import com.example.yudizapplication.recyclerview.model.PersonInformation
 import com.example.yudizapplication.selector.LoginScreen
+import com.example.yudizapplication.snackbar.SnackbarScreen
 import com.example.yudizapplication.viewpager.OnBordingViewpager
 
 class OnBoardingScreen2 : AppCompatActivity() {
@@ -26,6 +27,7 @@ class OnBoardingScreen2 : AppCompatActivity() {
 
        var recyclerview = findViewById<Button>(R.id.recyclerView_Btn)
        var btn_coordinator = findViewById<Button>(R.id.btn_coordinator)
+       var btn_snackbar = findViewById<Button>(R.id.btn_snackbar)
        var fab_btn_back = findViewById<View>(R.id.fab_btn_back)
 
         recyclerview.setOnClickListener {
@@ -34,6 +36,10 @@ class OnBoardingScreen2 : AppCompatActivity() {
         }
         btn_coordinator.setOnClickListener {
             intent = Intent(applicationContext, CoordinatorScreen::class.java)
+            startActivity(intent)
+        }
+        btn_snackbar.setOnClickListener {
+            intent = Intent(applicationContext, SnackbarScreen::class.java)
             startActivity(intent)
         }
 

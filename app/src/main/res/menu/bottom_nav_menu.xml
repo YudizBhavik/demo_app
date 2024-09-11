@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_left"
+        android:icon="@drawable/baseline_settings_24"
+        android:enabled="true"
+        android:title="Left"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/nav_center"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/baseline_navigate_next_24"
+        android:title="Right" />
+
+</menu>

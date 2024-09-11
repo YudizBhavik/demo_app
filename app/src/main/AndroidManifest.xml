@@ -13,9 +13,13 @@
         android:theme="@style/Base.Theme.YudizApplication"
         tools:targetApi="34">
         <activity
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:name=".coordinator.CoordinatorScreen"
+            android:theme="@style/Theme.YudizApplication"
+            android:name=".snackbar.SnackbarScreen"
             android:exported="false" />
+        <activity
+            android:name=".coordinator.CoordinatorScreen"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".views.OnBoardingScreen2"
             android:exported="false"

@@ -13,6 +13,9 @@
         android:theme="@style/Base.Theme.YudizApplication"
         tools:targetApi="34">
         <activity
+            android:name=".dialog.AddUserScreen"
+            android:exported="false" />
+        <activity
             android:name=".exp_menu.PopupScreen"
             android:exported="false" />
         <activity

@@ -1,17 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+        xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/nav_left"
-        android:icon="@drawable/baseline_settings_24"
-        android:enabled="true"
-        android:title="Left"
-        app:showAsAction="ifRoom"/>
+        android:id="@+id/option_1"
+        android:title="Option 1"
+        app:showAsAction="never" />
+
     <item
-        android:id="@+id/nav_center"
-        android:enabled="true"
-        app:showAsAction="ifRoom"
-        android:icon="@drawable/baseline_navigate_next_24"
-        android:title="Right" />
+        android:iconTint="@color/teal_200"
+        android:id="@+id/option_2"
+        android:title="Option 2"
+        app:showAsAction="never" />
 
 </menu>

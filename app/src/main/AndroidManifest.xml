@@ -13,9 +13,19 @@
         android:theme="@style/Base.Theme.YudizApplication"
         tools:targetApi="34">
         <activity
-            android:theme="@style/Theme.YudizApplication"
-            android:name=".snackbar.SnackbarScreen"
+            android:name=".exp_menu.PopupScreen"
             android:exported="false" />
+        <activity
+            android:name=".exp_menu.ContextScreen"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.Bridge" />
+        <activity
+            android:name=".fontExample.FontScreen"
+            android:exported="false" />
+        <activity
+            android:name=".snackbar.SnackbarScreen"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.DayNight.Bridge" />
         <activity
             android:name=".coordinator.CoordinatorScreen"
             android:exported="false"

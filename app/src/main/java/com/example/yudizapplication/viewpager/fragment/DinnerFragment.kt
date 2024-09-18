@@ -1,4 +1,4 @@
-    package com.example.yudizapplication.viewpager.fragment
+package com.example.yudizapplication.viewpager.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

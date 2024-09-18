@@ -10,6 +10,7 @@ import com.example.yudizapplication.coordinator.CoordinatorScreen
 import com.example.yudizapplication.dialog.AddUserScreen
 import com.example.yudizapplication.exp_menu.ContextScreen
 import com.example.yudizapplication.fontExample.FontScreen
+import com.example.yudizapplication.fragments.FragmentExample
 import com.example.yudizapplication.layout.Second_Task
 import com.example.yudizapplication.recyclerview.model.PersonInformation
 import com.example.yudizapplication.selector.LoginScreen
@@ -38,6 +39,7 @@ class OnBoardingScreen : AppCompatActivity() {
        val btn_context_menu = findViewById<Button>(R.id.menu)
        val btn_dialog = findViewById<Button>(R.id.btn_dialog)
        val btn_s_activity = findViewById<Button>(R.id.btn_S_activity)
+       val btn_fragment_exp = findViewById<Button>(R.id.fragment_exp)
 
         activity.setOnClickListener {
             intent = Intent(applicationContext, FirstScreen::class.java)
@@ -85,6 +87,10 @@ class OnBoardingScreen : AppCompatActivity() {
         }
         btn_s_activity.setOnClickListener {
             intent = Intent(applicationContext, StartActivity::class.java)
+            startActivity(intent)
+        }
+        btn_fragment_exp.setOnClickListener {
+            intent = Intent(applicationContext, FragmentExample::class.java)
             startActivity(intent)
         }
 

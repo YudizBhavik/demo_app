@@ -181,6 +181,19 @@
             android:text="@string/_12_start_act"
             android:textColor="@color/white"
             android:background="@drawable/bt_style"/>
+        <Button
+            android:id="@+id/fragment_exp"
+            android:hapticFeedbackEnabled="true"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_below="@+id/btn_S_activity"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_13_fragment"
+            android:textColor="@color/white"
+            android:background="@drawable/bt_style"/>
     </RelativeLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

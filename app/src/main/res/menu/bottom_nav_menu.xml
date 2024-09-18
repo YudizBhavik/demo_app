@@ -4,13 +4,17 @@
 
     <item
         android:id="@+id/option_1"
-        android:title="Option 1"
-        app:showAsAction="never" />
+        android:iconTint="@color/black"
+        android:title="@string/txt_settings"
+        android:icon="@drawable/baseline_settings_24"
+        app:showAsAction="always" />
 
     <item
-        android:iconTint="@color/teal_200"
+
         android:id="@+id/option_2"
-        android:title="Option 2"
-        app:showAsAction="never" />
+        android:title="@string/txt_home"
+        android:iconTint="@color/black"
+        android:icon="@drawable/baseline_home_24"
+        app:showAsAction="always" />
 
 </menu>

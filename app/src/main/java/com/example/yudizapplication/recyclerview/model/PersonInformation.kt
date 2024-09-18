@@ -24,9 +24,7 @@ class PersonInformation : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
 
-        // Set adapter
         val adapter = PersonAdapter(personList) { person ->
-            // Handle click and open the next screen
             val intent = Intent(this, DetailsActivity::class.java)
             intent.putExtra("name", person.name)
             intent.putExtra("contact", person.contactNumber)

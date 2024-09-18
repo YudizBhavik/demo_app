@@ -13,23 +13,23 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 class RecipeScreen : AppCompatActivity() {
 
-        private lateinit var viewPager: ViewPager2
-        private lateinit var tabLayout: TabLayout
+    private lateinit var viewPager: ViewPager2
+    private lateinit var tabLayout: TabLayout
 
-        var list = listOf("Breakfast","Launch","Dinner")
+    var list = listOf("Breakfast","Launch","Dinner")
 
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_recipe_screen)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_recipe_screen)
 
-            viewPager = findViewById(R.id.viewPager)
-            tabLayout = findViewById(R.id.tabLayout)
+        viewPager = findViewById(R.id.viewPager)
+        tabLayout = findViewById(R.id.tabLayout)
 
-            val pagerAdapter = RecipePagerAdapter(this)
-            viewPager.adapter = pagerAdapter
+        val pagerAdapter = RecipePagerAdapter(this)
+        viewPager.adapter = pagerAdapter
 
-            TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-                tab.text = list[position]
-            }.attach()
-        }
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            tab.text = list[position]
+        }.attach()
+    }
 }

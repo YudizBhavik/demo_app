@@ -8,6 +8,8 @@ import android.provider.MediaStore
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.yudizapplication.R
 import de.hdodenhof.circleimageview.CircleImageView
@@ -17,6 +19,7 @@ class StartActivity : AppCompatActivity() {
     private lateinit var emailTxtView: TextView
     private lateinit var phoneTxtView: TextView
     private lateinit var profileImgView: CircleImageView
+    private lateinit var pickImageLauncher : ActivityResultLauncher<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,11 +38,16 @@ class StartActivity : AppCompatActivity() {
                 intent.putExtra("phone", phoneTxtView.text.toString())
                 startActivityForResult(intent, 100)
             }
-            profileImgView.setOnClickListener {
-                val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-                startActivityForResult(intent, 200)
-            }
+
+        pickImageLauncher = registerForActivityResult(ActivityResultContracts.GetContent()){
+            uri : Uri? -> uri?.let {
+                profileImgView.setImageURI(it)
         }
+        }
+        profileImgView.setOnClickListener{
+            pickImageLauncher.launch("image/*")
+    }
+    }
 
         override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
             super.onActivityResult(requestCode, resultCode, data)
@@ -49,10 +57,6 @@ class StartActivity : AppCompatActivity() {
                         nameTxtView.text = data?.getStringExtra("updatedName")
                         emailTxtView.text = data?.getStringExtra("updatedEmail")
                         phoneTxtView.text = data?.getStringExtra("updatedPhone")
-                    }
-                    200 -> {
-                        val imageUri: Uri? = data?.data
-                        profileImgView.setImageURI(imageUri)
                     }
                 }
             }

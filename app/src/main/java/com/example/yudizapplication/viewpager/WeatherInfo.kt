@@ -22,25 +22,25 @@ class WeatherInfo : AppCompatActivity() {
 
 
 
-                val daysWithImages = listOf(
-                    Pair("Sunday: Wind,31°C", R.drawable.wind),
-                    Pair("Monday: Cloudy, 32°C", R.drawable.sunny_cloud),
-                    Pair("Tuesday: Wind,31°C", R.drawable.wind),
-                    Pair("Wednesday: Cloudy,30°C", R.drawable.sunny_cloud),
-                    Pair("Thursday: Cloudy,30°C", R.drawable.sunny_cloud),
-                    Pair("Friday: Wind,31°C", R.drawable.wind),
-                    Pair("Saturday: Cloudy,31°C", R.drawable.sunny_cloud),
-                )
+        val daysWithImages = listOf(
+            Pair("Sunday: Wind,31°C", R.drawable.wind),
+            Pair("Monday: Cloudy, 32°C", R.drawable.sunny_cloud),
+            Pair("Tuesday: Wind,31°C", R.drawable.wind),
+            Pair("Wednesday: Cloudy,30°C", R.drawable.sunny_cloud),
+            Pair("Thursday: Cloudy,30°C", R.drawable.sunny_cloud),
+            Pair("Friday: Wind,31°C", R.drawable.wind),
+            Pair("Saturday: Cloudy,31°C", R.drawable.sunny_cloud),
+        )
 
-                val viewPager: ViewPager2 = findViewById(R.id.viewPager)
-                val tabLayout: TabLayout = findViewById(R.id.tabLayout)
+        val viewPager: ViewPager2 = findViewById(R.id.viewPager)
+        val tabLayout: TabLayout = findViewById(R.id.tabLayout)
 
-                val adapter = WeatherPagerAdapter(this, daysWithImages)
-                viewPager.adapter = adapter
+        val adapter = WeatherPagerAdapter(this, daysWithImages)
+        viewPager.adapter = adapter
 
-                // Link the TabLayout with ViewPager2
-                TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-                    tab.text = daysWithImages[position].first // Use the day name for tab title
-                }.attach()
-            }
-        }
+        // Link the TabLayout with ViewPager2
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            tab.text = daysWithImages[position].first // Use the day name for tab title
+        }.attach()
+    }
+}

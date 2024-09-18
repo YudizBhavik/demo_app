@@ -13,6 +13,10 @@
         android:theme="@style/Base.Theme.YudizApplication"
         tools:targetApi="34">
         <activity
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar.Bridge"
+            android:name=".fragments.FragmentExample"
+            android:exported="false" />
+        <activity
             android:name=".start_activity.UpdateProfile"
             android:exported="false" />
         <activity

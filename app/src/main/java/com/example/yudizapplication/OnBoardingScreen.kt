@@ -2,20 +2,21 @@ package com.example.yudizapplication
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.yudizapplication.activity.FirstScreen
+import com.example.yudizapplication.coordinator.CoordinatorScreen
+import com.example.yudizapplication.dialog.AddUserScreen
+import com.example.yudizapplication.exp_menu.ContextScreen
+import com.example.yudizapplication.fontExample.FontScreen
 import com.example.yudizapplication.layout.Second_Task
+import com.example.yudizapplication.recyclerview.model.PersonInformation
 import com.example.yudizapplication.selector.LoginScreen
+import com.example.yudizapplication.snackbar.SnackbarScreen
+import com.example.yudizapplication.start_activity.StartActivity
 import com.example.yudizapplication.viewpager.OnBordingViewpager
-import com.example.yudizapplication.viewpager.WeatherInfo
-import com.example.yudizapplication.views.OnBoardingScreen2
 import com.example.yudizapplication.views.RegistrationForm
-import com.google.android.material.snackbar.Snackbar
 
 class OnBoardingScreen : AppCompatActivity() {
 
@@ -30,7 +31,13 @@ class OnBoardingScreen : AppCompatActivity() {
        var views = findViewById<Button>(R.id.btn_view)
        var selector = findViewById<Button>(R.id.btn_selector)
        var viewpagger = findViewById<Button>(R.id.btn_viewpagger)
-       var fab_btn = findViewById<View>(R.id.fab_btn_next)
+       val recyclerview = findViewById<Button>(R.id.btn_recyclerView)
+       val btn_coordinator = findViewById<Button>(R.id.btn_coordinator)
+       val btn_snackbar = findViewById<Button>(R.id.btn_snackbar)
+       val btn_font = findViewById<Button>(R.id.btn_font)
+       val btn_context_menu = findViewById<Button>(R.id.menu)
+       val btn_dialog = findViewById<Button>(R.id.btn_dialog)
+       val btn_s_activity = findViewById<Button>(R.id.btn_S_activity)
 
         activity.setOnClickListener {
             intent = Intent(applicationContext, FirstScreen::class.java)
@@ -52,9 +59,32 @@ class OnBoardingScreen : AppCompatActivity() {
             intent = Intent(applicationContext, OnBordingViewpager::class.java)
             startActivity(intent)
         }
-
-        fab_btn.setOnClickListener {
-            intent = Intent(applicationContext, OnBoardingScreen2::class.java)
+        recyclerview.setOnClickListener {
+            intent = Intent(applicationContext, PersonInformation::class.java)
+            startActivity(intent)
+        }
+        btn_coordinator.setOnClickListener {
+            intent = Intent(applicationContext, CoordinatorScreen::class.java)
+            startActivity(intent)
+        }
+        btn_snackbar.setOnClickListener {
+            intent = Intent(applicationContext, SnackbarScreen::class.java)
+            startActivity(intent)
+        }
+        btn_font.setOnClickListener {
+            intent = Intent(applicationContext, FontScreen::class.java)
+            startActivity(intent)
+        }
+        btn_context_menu.setOnClickListener {
+            intent = Intent(applicationContext, ContextScreen::class.java)
+            startActivity(intent)
+        }
+        btn_dialog.setOnClickListener {
+            intent = Intent(applicationContext, AddUserScreen::class.java)
+            startActivity(intent)
+        }
+        btn_s_activity.setOnClickListener {
+            intent = Intent(applicationContext, StartActivity::class.java)
             startActivity(intent)
         }
 

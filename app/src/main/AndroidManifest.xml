@@ -13,8 +13,15 @@
         android:theme="@style/Base.Theme.YudizApplication"
         tools:targetApi="34">
         <activity
-            android:name=".dialog.AddUserScreen"
+            android:name=".start_activity.UpdateProfile"
             android:exported="false" />
+        <activity
+            android:name=".start_activity.StartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dialog.AddUserScreen"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.Bridge" />
         <activity
             android:name=".exp_menu.PopupScreen"
             android:exported="false" />

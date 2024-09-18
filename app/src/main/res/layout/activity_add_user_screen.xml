@@ -9,7 +9,7 @@
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/add_user"
+        android:text="@string/user_details"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_gravity="center"/>
@@ -18,7 +18,7 @@
         android:id="@+id/btnAddUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add User"
+        android:text="@string/add_user"
         android:layout_gravity="center"/>
 
     <TextView

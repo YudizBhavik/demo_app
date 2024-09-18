@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Yudiz</string>
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
+    <!-- Strings used fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
@@ -58,4 +58,7 @@
     <string name="Menu">10. Menu</string>
     <string name="user_data">User Data:</string>
     <string name="add_user">ADD USER</string>
+    <string name="user_details">User Details</string>
+    <string name="_12_start_act">12. Start Activity</string>
+    <string name="_11_dialog">11. Dialog</string>
 </resources>

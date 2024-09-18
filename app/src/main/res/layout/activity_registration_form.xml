@@ -25,7 +25,7 @@
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/banner_image"
         android:scaleType="centerCrop"
-        android:background="@drawable/bg_banner"/>
+        android:background="@drawable/banner_bg_1"/>
 
 
 
@@ -35,7 +35,7 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/yudiz_fam"
         android:text="@string/hello_nyudiz_fam"
-        android:textSize="40sp"
+        android:textSize="@dimen/text_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"

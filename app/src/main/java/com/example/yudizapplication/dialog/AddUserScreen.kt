@@ -1,22 +1,23 @@
 package com.example.yudizapplication.dialog
 
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.yudizapplication.R
+import java.text.SimpleDateFormat
 import java.util.Calendar
+import java.util.Locale
 
 class AddUserScreen : AppCompatActivity() {
     private lateinit var tvUserData: TextView
     private lateinit var btnAddUser: Button
     private var selectedDateOfBirth: String = ""
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,9 +31,12 @@ class AddUserScreen : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun showAddUserDialog() {
         val dialogView = layoutInflater.inflate(R.layout.dialog_add, null)
         val etDob = dialogView.findViewById<EditText>(R.id.etDob)
+        val fname = dialogView.findViewById<EditText>(R.id.fname)
+        val lname = dialogView.findViewById<EditText>(R.id.lname)
         val btnSubmit = dialogView.findViewById<Button>(R.id.btnSubmit)
 
         etDob.setOnClickListener {
@@ -48,7 +52,11 @@ class AddUserScreen : AppCompatActivity() {
             .create()
 
         btnSubmit.setOnClickListener {
-            tvUserData.text = "User DOB: $selectedDateOfBirth"
+            val firstName = fname.text.toString()
+            val lastName = lname.text.toString()
+
+            tvUserData.text = "User First Name: $firstName\nUser Last Name: $lastName\nUser DOB: $selectedDateOfBirth"
+
             dialog.dismiss()
         }
 
@@ -57,15 +65,20 @@ class AddUserScreen : AppCompatActivity() {
 
     private fun showDatePickerDialog(onDateSelected: (String) -> Unit) {
         val calendar = Calendar.getInstance()
-        val year = calendar.get(Calendar.YEAR)
+        val year = calendar.set(Calendar.YEAR,2020)
         val month = calendar.get(Calendar.MONTH)
-        val day = calendar.get(Calendar.DAY_OF_MONTH)
-
+        val day = calendar.set(Calendar.DAY_OF_MONTH,11)
         val datePickerDialog = DatePickerDialog(this, { _, selectedYear, selectedMonth, selectedDay ->
-            val date = "$selectedDay/${selectedMonth + 1}/$selectedYear"
-            onDateSelected(date)
-        }, year, month, day)
+            calendar.set(selectedYear, selectedMonth, selectedDay)
 
+            val simpleDateFormat = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
+            val formattedDate = simpleDateFormat.format(calendar.time)
+
+            onDateSelected(formattedDate)
+        }, calendar.get(Calendar.YEAR), month, calendar.get(Calendar.DAY_OF_MONTH))
+
+        datePickerDialog.datePicker.maxDate = Calendar.getInstance().timeInMillis
         datePickerDialog.show()
     }
+
 }

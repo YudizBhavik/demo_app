@@ -4,10 +4,11 @@
     android:background="@color/white">
 
     <ImageView
+        android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_width="250dp"
-        android:layout_height="300dp"
-        android:src="@drawable/logo_yudiz"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img"/>
 
     <EditText
         android:id="@+id/editText1"
@@ -43,7 +44,7 @@
         android:layout_height="wrap_content"
         android:text="Submit"
         android:textColor="@color/white"
-        android:background="#66BB6A"
+        android:background="@drawable/bt_style"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/editText2"
         android:layout_marginTop="30dp" />

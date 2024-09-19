@@ -1,46 +1,67 @@
 <resources>
-    <string name="app_name">Yudiz Application</string>
+    <string name="app_name">Yudiz</string>
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
+    <!-- Strings used fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="frame1">Frame1</string>
+    <string name="frame2">Frame2</string>
+    <string name="frame3">Frame3</string>
+    <string name="frame4">Frame4</string>
+    <string name="frame5">Frame5</string>
+    <string name="frame6">Frame6</string>
+    <string name="frame_75">Frame(75)</string>
+    <string name="frame_50">Frame(50)</string>
+    <string name="frame_25">Frame(25)</string>
+    <string name="activity">1. Activity</string>
+    <string name="layout">2. Layout</string>
+    <string name="views">3. Views</string>
+    <string name="enter_your_first_name">First Name</string>
+    <string name="enter_first_name">Enter First Name</string>
 
-    <string name="lorem_ipsum">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
-        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
-        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
-        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
-        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
-        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
-        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
-        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
-        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
-        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
-        bibendum, vel congue leo egestas.\n\n
-        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
-        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
-        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
-        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
-        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
-        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
-        est.\n\n
-        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
-        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
-        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
-        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
-        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
-        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
-        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
-        convallis.\n\n
-        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
-        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
-        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
-        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
-        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
-        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
-    </string>
+    <string name="enter_your_last_name">Last Name</string>
+    <string name="enter_last_name">Enter Last Name</string>
+    <string name="gender">Select Gender\t</string>
+    <string name="dob">Date of Birth\t</string>
+    <string name="enter_date_of_birth">Enter Date of Birth</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="enter_your_phone_number">Enter Phone Number</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_pass">Enter Password</string>
+    <string name="enter_adress">Enter Address</string>
+    <string name="enter_your_address">Enter Your Address</string>
+    <string name="t_c">Double check your data in the above form</string>
+    <string name="t_c_check">Terms and Conditions Apply</string>
+    <string name="banner_image">banner_image</string>
+    <string name="hello_nyudiz_fam">Hello, \nYudiz Fam.!!</string>
+    <string name="hello_nyudiz">Hello, Yudiz Fam.!!</string>
+    <string name="radio_female">Female</string>
+    <string name="radio_male">Male</string>
+    <string name="radio_another">Another</string>
+    <string name="txt_address">Address</string>
+    <string name="btn_submit">Submit</string>
+    <string name="_4_selector">4. Selector</string>
+    <string name="_5_selector">5. ViewPagger</string>
+    <string name="_6_recyclerview">6. RecyclerView</string>
+    <string name="let_s_login">Let\'s Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="weather_data">Weather Data</string>
+    <string name="_7_coordinator">7. Coordinator</string>
+    <string name="_8_snackbar">8. Snackbar</string>
+
+
+    <string name="sample_para">Bali is predominantly a Hindu country. Bali is known for its elaborate, traditional dancing. The dancing is inspired by its Hindi beliefs. Most of the dancing portrays tales of good versus evil. To watch the dancing is a breathtaking experience. Lombok has some impressive points of interest – the majestic Gunung Rinjani is an active volcano. It is the second highest peak in Indonesia. Art is a Balinese passion. Batik paintings and carved statues make popular souvenirs. Artists can be seen whittling and painting on the streets, particularly in Ubud. It is easy to appreciate each island as an attractive tourist destination. Majestic scenery; rich culture; white sands and warm, azure waters draw visitors like magnets every year. Snorkelling and diving around the nearby Gili Islands is magnificent. Marine fish, starfish, turtles and coral reef are present in abundance. Bali and Lombok are part of the Indonesian archipelago. Bali has some spectacular temples. The most significant is the Mother Temple, Besakih. The inhabitants of Lombok are mostly Muslim with a Hindu minority. Lombok remains the most understated of the two islands. Lombok has several temples worthy of a visit, though they are less prolific. Bali and Lombok are neighbouring islands.</string>
+    <string name="font">9. Font</string>
+    <string name="Menu">10. Menu</string>
+    <string name="user_data">User Data:</string>
+    <string name="add_user">ADD USER</string>
+    <string name="user_details">User Details</string>
+    <string name="_12_start_act">12. Start Activity</string>
+    <string name="_11_dialog">11. Dialog</string>
+    <string name="_13_fragment">13. Fragment</string>
+    <string name="txt_settings">Settings</string>
+    <string name="txt_home">Home</string>
 </resources>

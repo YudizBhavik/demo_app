@@ -8,4 +8,16 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="gray">#e1e6ec</color>
+
+        <color name="red_background">#CB202D</color>
+        <color name="pink_background">#EC0C92</color>
+        <color name="white_background">#F4F4F2</color>
+        <color name="custom_black">#2D2D2D</color>
+        <color name="box_color" >#C4C4C4</color>
+        <color name="skip_bg_black">#802D2D2D</color>
+        <color name="yellow_background">#FF7A00</color>
+        <color name="blue_background">#039FF6</color>
+        <color name="sky_background">#279AED</color>
+        <color name="see_btn_color">#E5E5E5</color>
+        <color name="edit_home_font">#CFCFCF</color>
 </resources>

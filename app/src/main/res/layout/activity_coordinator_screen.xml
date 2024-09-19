@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".coordinator.CoordinatorScreen">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:collapsedTitleTextColor="@color/black"
+            app:contentScrim="#FFFFFF"
+            app:layout_scrollFlags="scroll|snap|enterAlways"
+            app:title="Hello Mr...."
+            android:scrollbarSize="@dimen/text_size"
+            app:titleCollapseMode="fade"
+            app:titleEnabled="true">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center|end"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img" />
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/green_bg"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:id="@+id/txt_f_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="25dp"
+                android:text="@string/enter_your_first_name"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/txt_f_name"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20sp"
+                android:background="@drawable/et_style"
+                android:hint="@string/enter_first_name"
+                android:importantForAutofill="no"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/txt_f_name"
+                app:layout_constraintTop_toBottomOf="@id/txt_f_name" />
+
+            <TextView
+                android:id="@+id/txt_l_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText1"
+                android:layout_marginTop="5dp"
+                android:text="@string/enter_your_last_name"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/txt_f_name"
+                app:layout_constraintTop_toBottomOf="@id/editText1" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/txt_l_name"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20sp"
+                android:background="@drawable/et_style"
+                android:hint="@string/enter_last_name"
+                android:importantForAutofill="no"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/editText1"
+                app:layout_constraintStart_toStartOf="@+id/editText1"
+                app:layout_constraintTop_toBottomOf="@id/txt_l_name" />
+
+            <TextView
+                android:id="@+id/txt_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/enter_your_phone_number"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/txt_f_name"
+                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+            <EditText
+                android:id="@+id/editText_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20sp"
+                android:autofillHints="phone"
+                android:background="@drawable/et_style"
+                android:hint="@string/enter_email"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/editText2"
+                app:layout_constraintStart_toStartOf="@+id/editText2"
+                app:layout_constraintTop_toBottomOf="@id/txt_email"
+                tools:ignore="TextFields" />
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/gender"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/txt_f_name"
+                app:layout_constraintTop_toBottomOf="@+id/editText_email" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25sp"
+                android:layout_marginTop="5dp"
+                android:checkedButton="@id/banner"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/gender">
+
+                <RadioButton
+                    android:id="@+id/radio_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/black"
+                    android:scaleX="1.1"
+                    android:scaleY="1.1"
+                    android:text="@string/radio_male"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/radio_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/black"
+                    android:scaleX="1.1"
+                    android:scaleY="1.1"
+                    android:text="@string/radio_female"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/radio_another"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/black"
+                    android:scaleX="1.1"
+                    android:scaleY="1.1"
+                    android:text="@string/radio_another"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="123dp"
+                android:text="@string/dob"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/txt_f_name"
+                app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+            <EditText
+                android:id="@+id/editText_dob"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20sp"
+                android:autofillHints="phone"
+                android:background="@drawable/et_style"
+                android:hint="@string/enter_date_of_birth"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/editText2"
+                app:layout_constraintStart_toStartOf="@+id/editText2"
+                app:layout_constraintTop_toBottomOf="@id/txt_dob" />
+
+            <TextView
+                android:id="@+id/txt_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/phone_number"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/txt_f_name"
+                app:layout_constraintTop_toBottomOf="@+id/editText_dob" />
+
+            <EditText
+                android:id="@+id/editText_phone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20sp"
+                android:autofillHints="phone"
+                android:background="@drawable/et_style"
+                android:hint="@string/enter_your_phone_number"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/editText2"
+                app:layout_constraintStart_toStartOf="@+id/editText_dob"
+                app:layout_constraintTop_toBottomOf="@id/txt_phone"
+                tools:ignore="TextFields" />
+
+            <TextView
+                android:id="@+id/txt_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/txt_address"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/txt_f_name"
+                app:layout_constraintTop_toBottomOf="@+id/editText_phone" />
+
+            <EditText
+                android:id="@+id/editText_address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20sp"
+                android:autofillHints="phone"
+                android:background="@drawable/et_style"
+                android:hint="@string/enter_your_address"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/editText2"
+                app:layout_constraintStart_toStartOf="@+id/editText_dob"
+                app:layout_constraintTop_toBottomOf="@id/txt_address" />
+
+            <CheckBox
+                android:id="@+id/t_c"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="5dp"
+                android:buttonTint="@color/black"
+                android:text="@string/t_c"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/txt_address"
+                app:layout_constraintTop_toBottomOf="@id/editText_address"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bt_style"
+                android:text="@string/btn_submit"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/t_c" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="#fefefe"
+        android:baselineAlignBottom="false"
+        android:clickable="true"
+        android:src="@drawable/baseline_navigate_next_24"
+        app:fabSize="normal"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="end|bottom"
+        app:rippleColor="@color/gray" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

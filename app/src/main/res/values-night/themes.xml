@@ -1,7 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.YudizApplication" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.YudizApplication" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+
+    <style name="android_button_checkBox">
+        <item name="android:button">@drawable/check_box_selector</item>
+    </style>
+
+
 </resources>

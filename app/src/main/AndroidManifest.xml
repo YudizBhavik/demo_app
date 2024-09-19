@@ -13,8 +13,72 @@
         android:theme="@style/Base.Theme.YudizApplication"
         tools:targetApi="34">
         <activity
-            android:name=".Second_Task"
-            android:exported="true" >
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar.Bridge"
+            android:name=".fragments.FragmentExample"
+            android:exported="false" />
+        <activity
+            android:name=".start_activity.UpdateProfile"
+            android:exported="false" />
+        <activity
+            android:name=".start_activity.StartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dialog.AddUserScreen"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.Bridge" />
+        <activity
+            android:name=".exp_menu.PopupScreen"
+            android:exported="false" />
+        <activity
+            android:name=".exp_menu.ContextScreen"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.Bridge" />
+        <activity
+            android:name=".fontExample.FontScreen"
+            android:exported="false" />
+        <activity
+            android:name=".snackbar.SnackbarScreen"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.DayNight.Bridge" />
+        <activity
+            android:name=".coordinator.CoordinatorScreen"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".views.OnBoardingScreen2"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".recyclerview.model.DetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".recyclerview.model.PersonInformation"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".viewpager.fragment.RecipeScreen2"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".viewpager.RecipeScreen"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".viewpager.OnBordingViewpager"
+            android:exported="false"
+            android:theme="@style/Theme.YudizApplication" />
+        <activity
+            android:name=".viewpager.WeatherInfo"
+            android:exported="false"
+            android:theme="@style/Theme.YudizApplication" />
+        <activity
+            android:name=".selector.LoginScreen"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoardingScreen"
+            android:exported="true"
+            android:theme="@style/Theme.YudizApplication">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,16 +86,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FirstScreen"
-            android:exported="false">
-        </activity>
+            android:name=".views.RegistrationForm"
+            android:exported="false" />
         <activity
-            android:name=".SecondActivity"
+            android:name=".layout.Second_Task"
+            android:exported="true" />
+        <activity
+            android:name=".activity.FirstScreen"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SecondActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:theme="@style/Theme.YudizApplication"/>
+            android:theme="@style/Theme.YudizApplication" />
     </application>
 
 </manifest>

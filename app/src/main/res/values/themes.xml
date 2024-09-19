@@ -2,8 +2,25 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.YudizApplication" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+         <item name="android:statusBarColor">#FFFFFF</item>
+    </style>
+    <style name="android_button_checkBox">
+        <item name="android:button">@drawable/check_box_selector</item>
+    </style>
+    <style name="Theme.YudizApplication" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Other theme attributes -->
+        <item name="colorPrimary">@color/teal_200</item>
+        <item name="colorPrimaryVariant">@color/teal_700</item>
+        <item name="colorOnPrimary">@color/black</item>
     </style>
 
-    <style name="Theme.YudizApplication" parent="Base.Theme.YudizApplication" />
+
+    <style name="Theme.snackbar" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="snackbarStyle">@style/Widget.Design.Snackbar</item>
+        <item name="snackbarButtonStyle">@style/ThemeOverlay.Material3.Button.TextButton.Snackbar</item>
+    </style>
+
+    <!-- Customize light theme attributes here -->
+
+
 </resources>

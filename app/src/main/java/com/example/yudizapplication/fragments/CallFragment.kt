@@ -2,21 +2,17 @@ package com.example.yudizapplication.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.yudizapplication.R
-import com.example.yudizapplication.adapters.ChatAdapter
 import com.example.yudizapplication.fragments.Adapter.CallAdapter
 import com.example.yudizapplication.fragments.model.Call
-import com.example.yudizapplication.fragments.model.Chat
 
 class CallFragment : Fragment(R.layout.fragment_call) {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onViewCreated(view: View,savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         val callList = listOf(
             Call("Bhavik", "5 hours ago"),
@@ -24,9 +20,26 @@ class CallFragment : Fragment(R.layout.fragment_call) {
             Call("Kushal", "5 days ago"),
         )
 
-        val recyclerView: RecyclerView? = view?.findViewById(R.id.CallList)
-        recyclerView?.layoutManager = LinearLayoutManager(context)
-        recyclerView?.adapter = CallAdapter(callList)
+        val recyclerView: RecyclerView = view.findViewById(R.id.CallList)
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.adapter = CallAdapter(callList)
 
     }
 }
+
+//class ChatFragment : Fragment(R.layout.fragment_chat) {
+//
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//
+//        val chatList = listOf(
+//            Chat("Bhavik", "Hello, how are you?"),
+//            Chat("Harsh", "I'm good! How about you?"),
+//            Chat("Kushal", "Doing well, thanks for asking."),
+//        )
+//
+//        val recyclerView: RecyclerView = view.findViewById(R.id.ChatList)
+//        recyclerView.layoutManager = LinearLayoutManager(context)
+//        recyclerView.adapter = ChatAdapter(chatList)
+//    }
+//}

@@ -24,7 +24,7 @@ class ChatAdapter(private val chatList: List<Chat>) : RecyclerView.Adapter<ChatA
         val currentChat = chatList[position]
         holder.senderTextView.text = currentChat.sender
         holder.messageTextView.text = currentChat.message
-    }
 
+    }
     override fun getItemCount() = chatList.size
 }

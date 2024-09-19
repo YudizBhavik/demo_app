@@ -7,25 +7,24 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.yudizapplication.R
 import com.example.yudizapplication.fragments.model.Call
-import com.example.yudizapplication.fragments.model.Chat
 
 
 class CallAdapter(private val callList: List<Call>) : RecyclerView.Adapter<CallAdapter.CallViewHolder>() {
 
     inner class CallViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val nameTxt: TextView = itemView.findViewById(R.id.nameTextView)
+        val nameTxt: TextView = itemView.findViewById(R.id.CallTextView)
         val timeTxt: TextView = itemView.findViewById(R.id.TimeTextView)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CallViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_chatlist, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_call, parent, false)
         return CallViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: CallViewHolder, position: Int) {
-        val currentChat = callList[position]
-        holder.nameTxt.text = currentChat.call_name
-        holder.timeTxt.text = currentChat.time
+        val currentCall = callList[position]
+        holder.nameTxt.text = currentCall.call_name
+        holder.timeTxt.text = currentCall.time
     }
 
     override fun getItemCount() = callList.size

@@ -16,6 +16,7 @@ import com.example.yudizapplication.recyclerview.model.PersonInformation
 import com.example.yudizapplication.selector.LoginScreen
 import com.example.yudizapplication.snackbar.SnackbarScreen
 import com.example.yudizapplication.start_activity.StartActivity
+import com.example.yudizapplication.user_permission.ShowContact
 import com.example.yudizapplication.viewpager.OnBordingViewpager
 import com.example.yudizapplication.views.RegistrationForm
 
@@ -40,6 +41,7 @@ class OnBoardingScreen : AppCompatActivity() {
        val btn_dialog = findViewById<Button>(R.id.btn_dialog)
        val btn_s_activity = findViewById<Button>(R.id.btn_S_activity)
        val btn_fragment_exp = findViewById<Button>(R.id.fragment_exp)
+       val btn_user_permission = findViewById<Button>(R.id.user_permission)
 
         activity.setOnClickListener {
             intent = Intent(applicationContext, FirstScreen::class.java)
@@ -91,6 +93,10 @@ class OnBoardingScreen : AppCompatActivity() {
         }
         btn_fragment_exp.setOnClickListener {
             intent = Intent(applicationContext, FragmentExample::class.java)
+            startActivity(intent)
+        }
+        btn_user_permission.setOnClickListener {
+            intent = Intent(applicationContext, ShowContact::class.java)
             startActivity(intent)
         }
 

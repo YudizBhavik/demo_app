@@ -64,4 +64,6 @@
     <string name="_13_fragment">13. Fragment</string>
     <string name="txt_settings">Settings</string>
     <string name="txt_home">Home</string>
+    <string name="_14_user_permission">14. User Permission</string>
+    <string name="click_above_to_show_weather">Click above to show Weather</string>
 </resources>

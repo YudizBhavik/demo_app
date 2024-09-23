@@ -14,6 +14,7 @@ import com.example.yudizapplication.fragments.FragmentExample
 import com.example.yudizapplication.layout.Second_Task
 import com.example.yudizapplication.recyclerview.model.PersonInformation
 import com.example.yudizapplication.selector.LoginScreen
+import com.example.yudizapplication.sharedpreferences.SharedPreferencesExample
 import com.example.yudizapplication.snackbar.SnackbarScreen
 import com.example.yudizapplication.start_activity.StartActivity
 import com.example.yudizapplication.user_permission.ShowContact
@@ -42,6 +43,7 @@ class OnBoardingScreen : AppCompatActivity() {
        val btn_s_activity = findViewById<Button>(R.id.btn_S_activity)
        val btn_fragment_exp = findViewById<Button>(R.id.fragment_exp)
        val btn_user_permission = findViewById<Button>(R.id.user_permission)
+       val btn_sharedpreference = findViewById<Button>(R.id.btn_sharedpreferences)
 
         activity.setOnClickListener {
             intent = Intent(applicationContext, FirstScreen::class.java)
@@ -97,6 +99,10 @@ class OnBoardingScreen : AppCompatActivity() {
         }
         btn_user_permission.setOnClickListener {
             intent = Intent(applicationContext, ShowContact::class.java)
+            startActivity(intent)
+        }
+        btn_sharedpreference.setOnClickListener {
+            intent = Intent(applicationContext, SharedPreferencesExample::class.java)
             startActivity(intent)
         }
 

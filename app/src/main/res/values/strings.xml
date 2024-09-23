@@ -66,4 +66,7 @@
     <string name="txt_home">Home</string>
     <string name="_14_user_permission">14. User Permission</string>
     <string name="click_above_to_show_weather">Click above to show Weather</string>
+    <string name="_15_sharedpreference">15. SharedPreference</string>
+    <string name="btn_view">VIEW</string>
+    <string name="btn_clear">CLEAR</string>
 </resources>

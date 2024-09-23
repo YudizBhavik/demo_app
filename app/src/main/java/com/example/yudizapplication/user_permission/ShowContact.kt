@@ -33,8 +33,8 @@ class ShowContact : AppCompatActivity() {
                 }
                checkForPermission()
             }
-        )
 
+        )
         another.setOnClickListener{
             val intent = packageManager.getLaunchIntentForPackage("com.example.foodcourt")
             startActivity(intent)

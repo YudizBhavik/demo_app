@@ -8,8 +8,8 @@ import com.example.yudizapplication.recyclerview.model.Person
 
 class PersonAdapter(
     private val personList: List<Person>,
-    private val clickListener: (Person) -> Unit
-) : RecyclerView.Adapter<PersonAdapter.PersonViewHolder>() {
+    private val clickListener: (Person) -> Unit) : RecyclerView.Adapter<PersonAdapter.PersonViewHolder>()
+    {
     class PersonViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val nameTextView: TextView = view.findViewById(R.id.personName)
         val contactTextView: TextView = view.findViewById(R.id.contactTextView)

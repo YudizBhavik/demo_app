@@ -28,6 +28,7 @@ class Recipe : Fragment() {
         recipes = when (arguments?.getInt("CATEGORY_POSITION")) {
             0 -> listOf("Pava", "Aloo Paratha", "Tea")
             1 -> listOf("Mix veg", "Roti", "Dal-Bhat")
+            2 -> listOf("Panjabi sabji", "Roti/Paratha", "Dalfry-Jira rice","Butter-Milk")
             else -> listOf("Panjabi sabji", "Roti/Paratha", "Dalfry-Jira rice","Butter-Milk")
         }
 

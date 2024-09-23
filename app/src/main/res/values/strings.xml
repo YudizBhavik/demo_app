@@ -69,4 +69,6 @@
     <string name="_15_sharedpreference">15. SharedPreference</string>
     <string name="btn_view">VIEW</string>
     <string name="btn_clear">CLEAR</string>
+    <string name="btn_next">Next</string>
+    <string name="_16_intent_example">16. Intent Example</string>
 </resources>

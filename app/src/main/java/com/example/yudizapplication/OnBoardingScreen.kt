@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.yudizapplication.IntentExample.IntentExample
 import com.example.yudizapplication.activity.FirstScreen
 import com.example.yudizapplication.coordinator.CoordinatorScreen
 import com.example.yudizapplication.dialog.AddUserScreen
@@ -44,6 +45,7 @@ class OnBoardingScreen : AppCompatActivity() {
        val btn_fragment_exp = findViewById<Button>(R.id.fragment_exp)
        val btn_user_permission = findViewById<Button>(R.id.user_permission)
        val btn_sharedpreference = findViewById<Button>(R.id.btn_sharedpreferences)
+       val btn_intent_exp = findViewById<Button>(R.id.btn_intent_exp)
 
         activity.setOnClickListener {
             intent = Intent(applicationContext, FirstScreen::class.java)
@@ -103,6 +105,10 @@ class OnBoardingScreen : AppCompatActivity() {
         }
         btn_sharedpreference.setOnClickListener {
             intent = Intent(applicationContext, SharedPreferencesExample::class.java)
+            startActivity(intent)
+        }
+        btn_intent_exp.setOnClickListener {
+            intent = Intent(applicationContext, IntentExample::class.java)
             startActivity(intent)
         }
 

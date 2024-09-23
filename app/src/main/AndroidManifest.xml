@@ -5,9 +5,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-<!--    <uses-permission android:name="com.example.yudizapplication.PHONE_PERMISSION" />-->
-
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" /> <!-- <uses-permission android:name="com.example.yudizapplication.PHONE_PERMISSION" /> -->
     <queries>
         <package android:name="com.example.foodcourt" />
     </queries>
@@ -22,6 +20,21 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.YudizApplication"
         tools:targetApi="34">
+        <activity
+            android:name=".IntentExample.SendText"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".IntentExample.IntentExample"
+            android:exported="false" />
+        <activity
+            android:name=".sharedpreferences.SecuredSharedPreference"
+            android:exported="false" />
         <activity
             android:name=".sharedpreferences.SharedPreferencesExample"
             android:exported="false" />
@@ -50,9 +63,9 @@
             android:exported="false"
             android:theme="@style/Theme.MaterialComponents.DayNight.Bridge" />
         <activity
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar.Bridge"
             android:name=".fontExample.FontScreen"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar.Bridge" />
         <activity
             android:name=".snackbar.SnackbarScreen"
             android:exported="true"

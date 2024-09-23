@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntentExample.IntentExample">
+
+
+    <ImageView
+        android:id="@+id/yudiz_logo"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img"/>
+
+    <EditText
+        android:importantForAutofill="no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/yudiz_logo"
+        android:layout_marginTop="70dp"
+        android:id="@+id/edit_recipitent"
+        android:textColor="@color/black"
+        android:background="@drawable/et_style"
+        android:layout_width="match_parent"
+        android:textColorHint="@color/black"
+        android:layout_height="50dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:hint="Enter Recipitent" />
+
+    <EditText
+        android:importantForAutofill="no"
+        app:layout_constraintTop_toBottomOf="@id/edit_recipitent"
+        app:layout_constraintStart_toStartOf="@+id/edit_recipitent"
+        android:layout_marginTop="10dp"
+        android:id="@+id/edit_subject"
+        android:textColor="@color/black"
+        android:background="@drawable/et_style"
+        android:layout_width="match_parent"
+        android:textColorHint="@color/black"
+        android:layout_height="50dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:hint="Enter Subject of mail" />
+
+    <EditText
+        android:importantForAutofill="no"
+        app:layout_constraintTop_toBottomOf="@id/edit_subject"
+        app:layout_constraintStart_toStartOf="@+id/edit_subject"
+        android:layout_marginTop="10dp"
+        android:id="@+id/edit_message"
+        android:textColor="@color/black"
+        android:background="@drawable/et_style"
+        android:layout_width="match_parent"
+        android:textColorHint="@color/black"
+        android:layout_height="120dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:hint="Enter Message" />
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bt_style"
+        android:text="Send"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintTop_toBottomOf="@id/edit_message"/>
+
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bt_style"
+        android:text="@string/btn_next"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

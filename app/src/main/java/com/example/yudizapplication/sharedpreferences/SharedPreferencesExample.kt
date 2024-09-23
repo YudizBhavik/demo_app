@@ -43,10 +43,18 @@ class SharedPreferencesExample : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("Yudiz_sharedPreferences", MODE_PRIVATE)
         val myEdit = sharedPreferences.edit()
 
+        val btn_next = findViewById<Button>(R.id.btn_next)
+
+        btn_next.setOnClickListener(
+            View.OnClickListener {
+                intent = Intent(applicationContext,SecuredSharedPreference::class.java)
+                startActivity(intent)
+            }
+        )
+
 
         btn_submit.setOnClickListener(
             View.OnClickListener {
-                val phone:String = edit_phone.text.toString()
                 myEdit.putString("edit_firstname", edit_firstname.text.toString())
                 myEdit.putString("edit_lastname", edit_lastname.text.toString())
                 myEdit.putString("edit_email", edit_email.text.toString())

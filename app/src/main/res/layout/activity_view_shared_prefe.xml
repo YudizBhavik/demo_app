@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sharedpreferences.ViewSharedPrefe">
+
+    <TextView
+        android:id="@+id/textShowAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:text="Addess"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textShowFName"
+        app:layout_constraintTop_toTopOf="@+id/textView_Address" />
+
+    <TextView
+        android:id="@+id/textShowEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:text="Email"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textShowFName"
+        app:layout_constraintTop_toBottomOf="@+id/textShowFName"
+        app:layout_constraintTop_toTopOf="@+id/textView_Email" />
+
+    <TextView
+        android:id="@+id/textShowLName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:text="Lastname"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textShowFName"
+        app:layout_constraintTop_toBottomOf="@+id/textShowFName"
+        app:layout_constraintTop_toTopOf="@+id/textView_Lastname" />
+
+    <TextView
+        android:id="@+id/textView_Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_marginTop="8dp"
+        android:text="Email: "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textView_Firstname"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Lastname" />
+
+    <TextView
+        android:id="@+id/textView_Firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="12dp"
+        android:text="FirstName: "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textShowFName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="220dp"
+        android:text="FirstName"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_Firstname" />
+
+    <TextView
+        android:id="@+id/textShowPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:text="Phone"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textShowFName"
+        app:layout_constraintTop_toBottomOf="@+id/textShowFName"
+        app:layout_constraintTop_toTopOf="@+id/textView_Phone" />
+
+    <TextView
+        android:id="@+id/textView_Lastname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_marginTop="8dp"
+        android:text="LastName: "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textView_Firstname"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Firstname" />
+
+    <TextView
+        android:id="@+id/textView_Phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_marginTop="8dp"
+        android:text="Phone: "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textView_Firstname"
+        app:layout_constraintTop_toBottomOf="@+id/textView_DOB" />
+
+    <TextView
+        android:id="@+id/textShowDOB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:text="DOB"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textShowFName"
+        app:layout_constraintTop_toBottomOf="@+id/textShowFName"
+        app:layout_constraintTop_toTopOf="@+id/textView_DOB" />
+
+    <TextView
+        android:id="@+id/textView_Address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_marginTop="8dp"
+        android:text="Address: "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textView_Firstname"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Phone" />
+
+    <TextView
+        android:id="@+id/textView_DOB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_marginTop="8dp"
+        android:text="DOB: "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textView_Firstname"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Email" />
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@+id/textShowAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/btn_clear"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/btn_clear"
+        android:textColor="@color/white"
+        android:background="@drawable/bt_style"
+        android:layout_centerHorizontal="true" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

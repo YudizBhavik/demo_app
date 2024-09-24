@@ -19,39 +19,37 @@ import com.example.yudizapplication.user_permission.ShowContact
 
 class SharedPreferencesExample : AppCompatActivity() {
 
+    lateinit var edit_firstname : EditText
+    lateinit var edit_lastname : EditText
+    lateinit var edit_email : EditText
+    lateinit var edit_dob : EditText
+    lateinit var edit_phone : EditText
+    lateinit var edit_address : EditText
+    lateinit var btn_submit   : Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_shared_preferences_example)
-        val edit_firstname = findViewById<EditText>(R.id.edit_fname)
-        val edit_lastname = findViewById<EditText>(R.id.edit_lname)
-        val edit_email = findViewById<EditText>(R.id.edit_email)
-        val edit_dob = findViewById<EditText>(R.id.edit_dob)
-        val edit_phone = findViewById<EditText>(R.id.edit_phone)
-        val edit_address = findViewById<EditText>(R.id.edit_address)
-        val btn_submit = findViewById<Button>(R.id.btn_submit)
-        val btn_view = findViewById<Button>(R.id.btn_view)
-        val btn_clear = findViewById<Button>(R.id.btn_clear)
+         edit_firstname = findViewById(R.id.edit_fname)
+         edit_lastname = findViewById(R.id.edit_lname)
+         edit_email = findViewById(R.id.edit_email)
+         edit_dob = findViewById(R.id.edit_dob)
+         edit_phone = findViewById(R.id.edit_phone)
+         edit_address = findViewById(R.id.edit_address)
+         btn_submit = findViewById(R.id.btn_submit)
 
-        val txt_show_fname = findViewById<TextView>(R.id.textShowFName)
-        val txt_show_lname = findViewById<TextView>(R.id.textShowLName)
-        val txt_show_email = findViewById<TextView>(R.id.textShowEmail)
-        val txt_show_dob = findViewById<TextView>(R.id.textShowDOB)
-        val txt_show_phone = findViewById<TextView>(R.id.textShowPhone)
-        val txt_show_address = findViewById<TextView>(R.id.textShowAddress)
 
         val sharedPreferences = getSharedPreferences("Yudiz_sharedPreferences", MODE_PRIVATE)
         val myEdit = sharedPreferences.edit()
 
         val btn_next = findViewById<Button>(R.id.btn_next)
 
-        btn_next.setOnClickListener(
-            View.OnClickListener {
-                intent = Intent(applicationContext,SecuredSharedPreference::class.java)
+        btn_next.setOnClickListener{
+
+                val intent = Intent(this,SecuredSharedPreference::class.java)
                 startActivity(intent)
             }
-        )
-
 
         btn_submit.setOnClickListener(
             View.OnClickListener {
@@ -63,44 +61,22 @@ class SharedPreferencesExample : AppCompatActivity() {
                 myEdit.putString("edit_address", edit_address.text.toString())
                 myEdit.apply()
                 myEdit.commit()
+                intent = Intent(this,ViewSharedPrefe::class.java)
+                startActivity(intent)
             }
         )
 
-        btn_view.setOnClickListener {
-            val sh = getSharedPreferences("Yudiz_sharedPreferences", MODE_PRIVATE)
-                val shfirstname = sh.getString("edit_firstname", "")
-                val shlastname = sh.getString("edit_lastname", "")
-                val shemail = sh.getString("edit_email", "")
-                val shdob = sh.getString("edit_dob", "")
-                val shphone = sh.getString("edit_phone", "")
-                val shaddress = sh.getString("edit_address", "")
 
-            if (shfirstname.equals("") && shlastname.equals("") && shemail.equals("") && shdob.equals("") && shphone.equals("") && shaddress.equals("")){
-                txt_show_fname.setText("FirstName").toString()
-                txt_show_lname.setText("LastName").toString()
-                txt_show_lname.setText("Email").toString()
-                txt_show_lname.setText("DOB").toString()
-                txt_show_lname.setText("Phone").toString()
-                txt_show_lname.setText("Address").toString()
-            }else{
-                txt_show_fname.setText(shfirstname).toString()
-                txt_show_lname.setText(shlastname).toString()
-                txt_show_email.setText(shemail).toString()
-                txt_show_dob.setText(shdob).toString()
-                txt_show_phone.setText(shphone).toString()
-                txt_show_address.setText(shaddress).toString()
-            }
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        val sh = getSharedPreferences("Yudiz_sharedPreferences", MODE_PRIVATE)
+        if (sh.contains("edit_firstname") && sh.contains("edit_lastname") && sh.contains("edit_email") && sh.contains("edit_dob") && sh.contains("edit_phone") && sh.contains("edit_address")){
+            intent = Intent(this,ViewSharedPrefe::class.java)
+            startActivity(intent)
         }
-        btn_clear.setOnClickListener(View.OnClickListener {
-            val editor = sharedPreferences.edit()
-            editor.clear()
-            editor.apply()
-            edit_firstname.setText("").toString()
-            edit_lastname.setText("").toString()
-            edit_email.setText("").toString()
-            edit_dob.setText("").toString()
-            edit_phone.setText("").toString()
-            edit_address.setText("").toString()
-        })
     }
 }

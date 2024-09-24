@@ -16,17 +16,14 @@ class SendText : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_send_text)
 
-        val btn_next = findViewById<Button>(R.id.btn_submit)
-
         val edit_random_text = findViewById<EditText>(R.id.edit_randomtext)
-        btn_next.setOnClickListener {
-            val sendIntent: Intent = Intent().apply {
-                action = Intent.ACTION_SEND
-                putExtra(Intent.EXTRA_TEXT, edit_random_text.text.toString())
-                type = "text/plain"
-            }
-            val shareIntent = Intent.createChooser(sendIntent, null)
-            startActivity(shareIntent)
+
+        val sendIntent: Intent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, edit_random_text.text.toString())
+            type = "text/plain"
+            val text = intent.getStringExtra(Intent.EXTRA_TEXT)
+            edit_random_text.setText(text)
         }
     }
 }

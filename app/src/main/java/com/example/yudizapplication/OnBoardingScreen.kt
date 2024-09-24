@@ -21,6 +21,7 @@ import com.example.yudizapplication.start_activity.StartActivity
 import com.example.yudizapplication.user_permission.ShowContact
 import com.example.yudizapplication.viewpager.OnBordingViewpager
 import com.example.yudizapplication.views.RegistrationForm
+import com.example.yudizapplication.webview.WebviewExample
 
 class OnBoardingScreen : AppCompatActivity() {
 
@@ -46,6 +47,7 @@ class OnBoardingScreen : AppCompatActivity() {
        val btn_user_permission = findViewById<Button>(R.id.user_permission)
        val btn_sharedpreference = findViewById<Button>(R.id.btn_sharedpreferences)
        val btn_intent_exp = findViewById<Button>(R.id.btn_intent_exp)
+       val btn_webview = findViewById<Button>(R.id.btn_webview)
 
         activity.setOnClickListener {
             intent = Intent(applicationContext, FirstScreen::class.java)
@@ -109,6 +111,10 @@ class OnBoardingScreen : AppCompatActivity() {
         }
         btn_intent_exp.setOnClickListener {
             intent = Intent(applicationContext, IntentExample::class.java)
+            startActivity(intent)
+        }
+        btn_webview.setOnClickListener {
+            intent = Intent(applicationContext, WebviewExample::class.java)
             startActivity(intent)
         }
 

@@ -28,7 +28,7 @@ class IntentExample : AppCompatActivity() {
         val btn_next = findViewById<Button>(R.id.btn_next)
 
         btn_next.setOnClickListener {
-            intent = Intent(applicationContext,SendText::class.java)
+            intent = Intent(this,SendText::class.java)
             startActivity(intent)
         }
 

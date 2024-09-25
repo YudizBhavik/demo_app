@@ -7,13 +7,16 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.yudizapplication.IntentExample.IntentExample
 import com.example.yudizapplication.activity.FirstScreen
+import com.example.yudizapplication.coil.CoilExample
 import com.example.yudizapplication.coordinator.CoordinatorScreen
 import com.example.yudizapplication.dialog.AddUserScreen
 import com.example.yudizapplication.exp_menu.ContextScreen
 import com.example.yudizapplication.fontExample.FontScreen
 import com.example.yudizapplication.fragments.FragmentExample
+import com.example.yudizapplication.glide.GlideExample
 import com.example.yudizapplication.layout.Second_Task
 import com.example.yudizapplication.recyclerview.model.PersonInformation
+import com.example.yudizapplication.roomdb.TodoListScreen
 import com.example.yudizapplication.selector.LoginScreen
 import com.example.yudizapplication.sharedpreferences.SharedPreferencesExample
 import com.example.yudizapplication.snackbar.SnackbarScreen
@@ -48,73 +51,88 @@ class OnBoardingScreen : AppCompatActivity() {
        val btn_sharedpreference = findViewById<Button>(R.id.btn_sharedpreferences)
        val btn_intent_exp = findViewById<Button>(R.id.btn_intent_exp)
        val btn_webview = findViewById<Button>(R.id.btn_webview)
+       val btn_glide = findViewById<Button>(R.id.btn_Glide)
+       val btn_coil = findViewById<Button>(R.id.btn_coil)
+       val btn_todo = findViewById<Button>(R.id.btn_roomdb)
 
         activity.setOnClickListener {
-            intent = Intent(applicationContext, FirstScreen::class.java)
+            intent = Intent(this, FirstScreen::class.java)
             startActivity(intent)
         }
         layout.setOnClickListener {
-            intent = Intent(applicationContext, Second_Task::class.java)
+            intent = Intent(this, Second_Task::class.java)
             startActivity(intent)
         }
         views.setOnClickListener {
-            intent = Intent(applicationContext, RegistrationForm::class.java)
+            intent = Intent(this, RegistrationForm::class.java)
             startActivity(intent)
         }
         selector.setOnClickListener {
-            intent = Intent(applicationContext, LoginScreen::class.java)
+            intent = Intent(this, LoginScreen::class.java)
             startActivity(intent)
         }
         viewpagger.setOnClickListener {
-            intent = Intent(applicationContext, OnBordingViewpager::class.java)
+            intent = Intent(this, OnBordingViewpager::class.java)
             startActivity(intent)
         }
         recyclerview.setOnClickListener {
-            intent = Intent(applicationContext, PersonInformation::class.java)
+            intent = Intent(this, PersonInformation::class.java)
             startActivity(intent)
         }
         btn_coordinator.setOnClickListener {
-            intent = Intent(applicationContext, CoordinatorScreen::class.java)
+            intent = Intent(this, CoordinatorScreen::class.java)
             startActivity(intent)
         }
         btn_snackbar.setOnClickListener {
-            intent = Intent(applicationContext, SnackbarScreen::class.java)
+            intent = Intent(this, SnackbarScreen::class.java)
             startActivity(intent)
         }
         btn_font.setOnClickListener {
-            intent = Intent(applicationContext, FontScreen::class.java)
+            intent = Intent(this, FontScreen::class.java)
             startActivity(intent)
         }
         btn_context_menu.setOnClickListener {
-            intent = Intent(applicationContext, ContextScreen::class.java)
+            intent = Intent(this, ContextScreen::class.java)
             startActivity(intent)
         }
         btn_dialog.setOnClickListener {
-            intent = Intent(applicationContext, AddUserScreen::class.java)
+            intent = Intent(this, AddUserScreen::class.java)
             startActivity(intent)
         }
         btn_s_activity.setOnClickListener {
-            intent = Intent(applicationContext, StartActivity::class.java)
+            intent = Intent(this, StartActivity::class.java)
             startActivity(intent)
         }
         btn_fragment_exp.setOnClickListener {
-            intent = Intent(applicationContext, FragmentExample::class.java)
+            intent = Intent(this, FragmentExample::class.java)
             startActivity(intent)
         }
         btn_user_permission.setOnClickListener {
-            intent = Intent(applicationContext, ShowContact::class.java)
+            intent = Intent(this, ShowContact::class.java)
             startActivity(intent)
         }
         btn_sharedpreference.setOnClickListener {
-            intent = Intent(applicationContext, SharedPreferencesExample::class.java)
+            intent = Intent(this, SharedPreferencesExample::class.java)
             startActivity(intent)
         }
         btn_intent_exp.setOnClickListener {
-            intent = Intent(applicationContext, IntentExample::class.java)
+            intent = Intent(this, IntentExample::class.java)
             startActivity(intent)
         }
         btn_webview.setOnClickListener {
-            intent = Intent(applicationContext, WebviewExample::class.java)
+            intent = Intent(this, WebviewExample::class.java)
+            startActivity(intent)
+        }
+        btn_glide.setOnClickListener {
+            intent = Intent(this, GlideExample::class.java)
+            startActivity(intent)
+        }
+        btn_coil.setOnClickListener {
+            intent = Intent(this, CoilExample::class.java)
+            startActivity(intent)
+        }
+        btn_todo.setOnClickListener {
+            intent = Intent(this, TodoListScreen::class.java)
             startActivity(intent)
         }
 

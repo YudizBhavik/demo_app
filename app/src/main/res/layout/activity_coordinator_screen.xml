@@ -32,6 +32,7 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center|end"
+                android:importantForAccessibility="no"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img" />
             <androidx.appcompat.widget.Toolbar
@@ -81,7 +82,8 @@
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
                 app:layout_constraintStart_toStartOf="@+id/txt_f_name"
-                app:layout_constraintTop_toBottomOf="@id/txt_f_name" />
+                app:layout_constraintTop_toBottomOf="@id/txt_f_name"
+                tools:ignore="TextFields" />
 
             <TextView
                 android:id="@+id/txt_l_name"

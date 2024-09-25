@@ -48,7 +48,7 @@ class SecuredSharedPreference : AppCompatActivity() {
         btn_submit.setOnClickListener {
             editor.putString("Fname",Fname.text.toString()).apply()
             editor.putString("Lname",Lname.text.toString()).apply()
-            intent = Intent(applicationContext,ViewSecuresShared::class.java)
+            intent = Intent(this,ViewSecuresShared::class.java)
             startActivity(intent)
         }
 
@@ -57,7 +57,7 @@ class SecuredSharedPreference : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         if (sharedPreferences.contains("Fname") && sharedPreferences.contains("Lname")){
-            intent = Intent(applicationContext,ViewSecuresShared::class.java)
+            intent = Intent(this,ViewSecuresShared::class.java)
             startActivity(intent)
         }
     }

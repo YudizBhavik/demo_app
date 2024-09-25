@@ -243,7 +243,46 @@
             android:layout_centerHorizontal="true"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="17. WebView"
+            android:text="@string/_17_webview"
+            android:textColor="@color/white"
+            android:background="@drawable/bt_style"/>
+        <Button
+            android:id="@+id/btn_Glide"
+            android:hapticFeedbackEnabled="true"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_below="@+id/btn_webview"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_18_glide"
+            android:textColor="@color/white"
+            android:background="@drawable/bt_style"/>
+        <Button
+            android:id="@+id/btn_coil"
+            android:hapticFeedbackEnabled="true"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_below="@+id/btn_Glide"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="19. Coil"
+            android:textColor="@color/white"
+            android:background="@drawable/bt_style"/>
+     <Button
+            android:id="@+id/btn_roomdb"
+            android:hapticFeedbackEnabled="true"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_below="@+id/btn_coil"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="20. Room Database"
             android:textColor="@color/white"
             android:background="@drawable/bt_style"/>
     </RelativeLayout>

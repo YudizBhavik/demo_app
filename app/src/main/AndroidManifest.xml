@@ -24,6 +24,15 @@
         android:theme="@style/Base.Theme.YudizApplication"
         tools:targetApi="34">
         <activity
+            android:name=".roomdb.TodoListScreen"
+            android:exported="false" />
+        <activity
+            android:name=".coil.CoilExample"
+            android:exported="false" />
+        <activity
+            android:name=".glide.GlideExample"
+            android:exported="false" />
+        <activity
             android:name=".sharedpreferences.ViewSecuresShared"
             android:exported="false" />
         <activity
@@ -35,7 +44,8 @@
         <activity
             android:name=".IntentExample.SendText"
             android:exported="true">
-            <intent-filter>
+            <intent-filter android:icon="@drawable/avatar1"
+                android:label="Demo Application">
                 <action android:name="android.intent.action.SEND" />
 
                 <category android:name="android.intent.category.DEFAULT" />

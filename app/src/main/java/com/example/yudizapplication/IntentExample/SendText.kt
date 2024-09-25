@@ -20,8 +20,6 @@ class SendText : AppCompatActivity() {
 
         val sendIntent: Intent = Intent().apply {
             action = Intent.ACTION_SEND
-            putExtra(Intent.EXTRA_TEXT, edit_random_text.text.toString())
-            type = "text/plain"
             val text = intent.getStringExtra(Intent.EXTRA_TEXT)
             edit_random_text.setText(text)
         }

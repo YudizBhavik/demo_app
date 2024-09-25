@@ -14,6 +14,12 @@ activity = "1.8.0"
 viewPager2 = "1.1.0-beta01"
 hdodenhof = "3.1.0"
 security = "1.0.0"
+glide = "4.11.0"
+coil = "2.7.0"
+coilgif = "2.7.0"
+room = "2.6.1"
+room_compiler = "2.6.1"
+room_ktx = "2.6.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -29,7 +35,12 @@ androidx-activity = { group = "androidx.activity", name = "activity", version.re
 view-pager = { group= "androidx.viewpager2", name = "viewpager2", version.ref = "viewPager2" }
 androidx-hdodenhof = {group = "de.hdodenhof" , name = "circleimageview", version.ref = "hdodenhof"}
 androidx-security = {group = "androidx.security", name = "security-crypto", version.ref = "security"}
-
+androidx-glide = {group = "com.github.bumptech.glide", name = "glide" , version.ref = "glide"}
+io-coil = {group = "io.coil-kt", name = "coil-compose", version.ref = "coil"}
+io-gif-coil = {group = "io.coil-kt" , name = "coil-gif", version.ref = "coilgif"}
+androidx-room = {group = "androidx.room", name = "room-runtime", version.ref = "room"}
+androidx-room-c = {group = "androidx.room", name = "room-compiler", version.ref = "room_compiler"}
+androidx-room-ktx = {group = "androidx.room", name= "room-ktx", version.ref = "room_ktx"}
 
 
 [plugins]

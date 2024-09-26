@@ -18,6 +18,7 @@ class IntentExample : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_intent_example)
+        title ="Gmail Demo"
 
        val Send_Email = findViewById<Button>(R.id.btn_send)
 
@@ -44,16 +45,11 @@ class IntentExample : AppCompatActivity() {
         val mIntent = Intent(Intent.ACTION_SEND)
         mIntent.data = Uri.parse("mailto:")
         mIntent.type = "text/plain"
-
+        mIntent.setPackage("com.google.android.gm")
         mIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(recipient))
         mIntent.putExtra(Intent.EXTRA_SUBJECT, subject)
         mIntent.putExtra(Intent.EXTRA_TEXT,message)
+        startActivity(Intent.createChooser(mIntent,"Choose mail client..."))
 
-
-        try {
-            startActivity(Intent.createChooser(mIntent,"Choose mail client..."))
-        }catch (e: Exception){
-            Toast.makeText(this,e.message,Toast.LENGTH_SHORT).show()
-        }
     }
 }

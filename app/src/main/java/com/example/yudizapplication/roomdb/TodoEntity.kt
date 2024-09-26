@@ -6,7 +6,8 @@ import java.util.Date
 
 @Entity(tableName = "todo")
 data class TodoEntity(
-    @PrimaryKey(autoGenerate = true) val id: Int? = null,
+    @PrimaryKey(autoGenerate = true)
+    val id: Int?,
     var title: String,
-    var createdAt : Date
+    var createdAt : String
 )

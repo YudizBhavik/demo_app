@@ -1,6 +1,7 @@
 [versions]
-agp = "8.5.0"
-kotlin = "1.9.0"
+agp = "8.6.0"
+compiler = "1.1.1"
+kotlin = "1.9.23"
 coreKtx = "1.10.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
@@ -23,6 +24,8 @@ room_ktx = "2.6.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+compiler = { module = "android.arch.persistence.room:compiler", version.ref = "compiler" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -39,8 +42,7 @@ androidx-glide = {group = "com.github.bumptech.glide", name = "glide" , version.
 io-coil = {group = "io.coil-kt", name = "coil-compose", version.ref = "coil"}
 io-gif-coil = {group = "io.coil-kt" , name = "coil-gif", version.ref = "coilgif"}
 androidx-room = {group = "androidx.room", name = "room-runtime", version.ref = "room"}
-androidx-room-c = {group = "androidx.room", name = "room-compiler", version.ref = "room_compiler"}
-androidx-room-ktx = {group = "androidx.room", name= "room-ktx", version.ref = "room_ktx"}
+
 
 
 [plugins]

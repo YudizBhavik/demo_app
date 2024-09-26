@@ -18,10 +18,10 @@ class SendText : AppCompatActivity() {
 
         val edit_random_text = findViewById<EditText>(R.id.edit_randomtext)
 
-        val sendIntent: Intent = Intent().apply {
-            action = Intent.ACTION_SEND
+
+            Intent.ACTION_SEND
             val text = intent.getStringExtra(Intent.EXTRA_TEXT)
             edit_random_text.setText(text)
-        }
+
     }
 }

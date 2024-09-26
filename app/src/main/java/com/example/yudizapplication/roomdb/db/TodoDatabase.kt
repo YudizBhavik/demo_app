@@ -7,10 +7,9 @@ import androidx.room.RoomDatabase
 import com.example.yudizapplication.roomdb.TodoEntity
 
 
-@Database(entities = [TodoEntity::class], version = 1)
+@Database(entities = [TodoEntity::class], version = 4)
 abstract class TodoDatabase: RoomDatabase() {
     abstract fun TodoDao() : TodoDao
-
 
     companion object {
         @Volatile
@@ -21,7 +20,7 @@ abstract class TodoDatabase: RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     TodoDatabase::class.java,
-                    "note_database"
+                    "todo_database"
                 ).build()
                 INSTANCE = instance
                 instance

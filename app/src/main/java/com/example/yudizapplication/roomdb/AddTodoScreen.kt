@@ -1,5 +1,6 @@
 package com.example.yudizapplication.roomdb
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -32,7 +33,6 @@ class AddTodoScreen : AppCompatActivity() {
        ).fallbackToDestructiveMigrationFrom().build()
 
         val add_todo_btn = findViewById<Button>(R.id.btn_add_todo)
-
         add_todo_btn.setOnClickListener {
             addTodo()
         }
@@ -48,5 +48,8 @@ class AddTodoScreen : AppCompatActivity() {
             Thread{todoDb.TodoDao().insert_todo(todo)}.start()
             println(todo)
         }
+        intent = Intent(this,TodoListScreen::class.java)
+        startActivity(intent)
     }
+
 }

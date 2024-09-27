@@ -21,5 +21,5 @@ interface TodoDao {
     fun delete_todo(todoEntity: TodoEntity)
 
     @Query("select * from todo")
-   fun getAll() : List<TodoEntity>
+   fun getAll() : MutableList<TodoEntity>
  }

@@ -57,6 +57,7 @@ dependencies {
     implementation(libs.androidx.room)
 //    implementation(libs.androidx.room.c)
 //    implementation(libs.androidx.room.ktx)
+    implementation(libs.retrofit)
     testImplementation(libs.junit)
     kapt("androidx.room:room-compiler:2.6.1")
     annotationProcessor("androidx.room:room-compiler:2.6.1")

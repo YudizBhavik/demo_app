@@ -24,6 +24,9 @@
         android:theme="@style/Base.Theme.YudizApplication"
         tools:targetApi="34">
         <activity
+            android:name=".roomdb.EditTodoScreen"
+            android:exported="false" />
+        <activity
             android:name=".Retrofit.RetrofitExampleScreen"
             android:exported="false" />
         <activity

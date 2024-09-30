@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     kotlin("kapt")
+
 }
 
 android {
@@ -58,9 +59,11 @@ dependencies {
 //    implementation(libs.androidx.room.c)
 //    implementation(libs.androidx.room.ktx)
     implementation(libs.retrofit)
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     testImplementation(libs.junit)
     kapt("androidx.room:room-compiler:2.6.1")
     annotationProcessor("androidx.room:room-compiler:2.6.1")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
 
     implementation(libs.androidx.security)
     androidTestImplementation(libs.androidx.junit)

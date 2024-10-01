@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "144724791752",
+    "project_id": "fir-99a08",
+    "storage_bucket": "fir-99a08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144724791752:android:53b329bcb3cbe22e65b0fd",
+        "android_client_info": {
+          "package_name": "com.example.yudizapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcYKaEm3U2BuSuAQ8OYDkBebKs4TpDB5U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

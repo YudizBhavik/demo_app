@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Multithreading.Example1">
+
+    <ImageView
+        android:id="@+id/add_todo_logo"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/logo_yudiz"/>
+
+
+    <EditText
+        android:id="@+id/edit_first_number"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:hint="Enter First Number"
+        android:paddingHorizontal="20dp"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/et_style"/>
+
+    <TextView
+        android:id="@+id/txt_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:fontFamily="@font/oswaldregular"
+        app:layout_constraintTop_toBottomOf="@+id/edit_first_number"
+        app:layout_constraintStart_toStartOf="@+id/edit_first_number"
+        app:layout_constraintEnd_toEndOf="@id/edit_first_number"
+        android:textAlignment="textStart"/>
+    <EditText
+        android:id="@+id/edit_second_number"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:hint="Enter Second Number"
+        android:paddingHorizontal="20dp"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/edit_first_number"
+        app:layout_constraintEnd_toEndOf="@id/edit_first_number"
+        app:layout_constraintTop_toBottomOf="@id/txt_add"
+        android:background="@drawable/et_style"/>
+    <Button
+        android:id="@+id/btn_addition"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:text="Add"
+        app:layout_constraintStart_toStartOf="@id/edit_first_number"
+        app:layout_constraintEnd_toEndOf="@id/edit_first_number"
+        app:layout_constraintTop_toBottomOf="@id/edit_second_number"
+        android:background="@drawable/bt_style"/>
+
+    <TextView
+        android:id="@+id/txt_add_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:fontFamily="@font/oswaldregular"
+       app:layout_constraintTop_toBottomOf="@id/btn_addition"
+        app:layout_constraintStart_toStartOf="@id/btn_addition"
+        app:layout_constraintEnd_toEndOf="@id/btn_addition"
+        android:textAlignment="textStart"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

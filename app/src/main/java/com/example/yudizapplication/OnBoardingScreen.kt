@@ -6,6 +6,7 @@ import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.yudizapplication.IntentExample.IntentExample
+import com.example.yudizapplication.Multithreading.Example1
 import com.example.yudizapplication.Retrofit.RetrofitExampleScreen
 import com.example.yudizapplication.activity.FirstScreen
 import com.example.yudizapplication.coil.CoilExample
@@ -56,6 +57,7 @@ class OnBoardingScreen : AppCompatActivity() {
        val btn_coil = findViewById<Button>(R.id.btn_coil)
        val btn_todo = findViewById<Button>(R.id.btn_roomdb)
        val btn_retrofit = findViewById<Button>(R.id.btn_retrofit)
+        val btn_multithreading = findViewById<Button>(R.id.btn_multithreading)
 
         activity.setOnClickListener {
             intent = Intent(this, FirstScreen::class.java)
@@ -139,6 +141,10 @@ class OnBoardingScreen : AppCompatActivity() {
         }
         btn_retrofit.setOnClickListener {
             intent = Intent(this, RetrofitExampleScreen::class.java)
+            startActivity(intent)
+        }
+        btn_multithreading.setOnClickListener {
+            intent = Intent(this, Example1::class.java)
             startActivity(intent)
         }
 

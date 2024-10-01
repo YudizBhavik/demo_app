@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     kotlin("kapt")
+    alias(libs.plugins.google.gms.google.services)
 
 }
 
@@ -60,6 +61,7 @@ dependencies {
 //    implementation(libs.androidx.room.ktx)
     implementation(libs.retrofit)
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation(libs.firebase.messaging)
     testImplementation(libs.junit)
     kapt("androidx.room:room-compiler:2.6.1")
     annotationProcessor("androidx.room:room-compiler:2.6.1")

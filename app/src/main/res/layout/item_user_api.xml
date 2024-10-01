@@ -54,6 +54,25 @@
                 android:textSize="14dp"
                 app:layout_constraintStart_toStartOf="@id/tv_user_company"
                 app:layout_constraintTop_toBottomOf="@id/tv_user_company"/>
+
+            <ImageButton
+                android:id="@+id/edit_icon_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/tv_user_id"
+                app:layout_constraintTop_toTopOf="@id/tv_user_company"
+                android:src="@drawable/icon_edit"
+                android:background="@android:color/transparent"/>
+            <ImageButton
+                android:id="@+id/delete_icon_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_delete"
+                android:layout_marginLeft="20dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toEndOf="@id/edit_icon_user"
+                app:layout_constraintTop_toTopOf="@id/tv_user_company"/>
+
             <TextView
                 android:id="@+id/tv_user_id"
                 android:layout_width="wrap_content"
@@ -64,7 +83,7 @@
                 android:textSize="14dp"
                 android:layout_marginEnd="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tv_user_company"/>
+                app:layout_constraintBottom_toBottomOf="parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

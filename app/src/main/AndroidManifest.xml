@@ -24,6 +24,12 @@
         android:theme="@style/Base.Theme.YudizApplication"
         tools:targetApi="34">
         <activity
+            android:name=".Multithreading.SecondTask"
+            android:exported="false" />
+        <activity
+            android:name=".Multithreading.Example1"
+            android:exported="false" />
+        <activity
             android:name=".roomdb.EditTodoScreen"
             android:exported="false" />
         <activity

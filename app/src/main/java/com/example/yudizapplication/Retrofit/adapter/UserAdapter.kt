@@ -56,13 +56,4 @@ class UserAdapter(
     override fun getItemCount(): Int {
         return users.size
     }
-
-    // Method to remove a user from the list
-    fun removeUser(user: Data_User) {
-        val position = users.indexOf(user)
-        if (position != -1) {
-            users.removeAt(position)
-            notifyItemRemoved(position)
-        }
-    }
 }

@@ -57,6 +57,12 @@ dependencies {
     implementation(libs.io.coil)
     implementation(libs.io.gif.coil)
     implementation(libs.androidx.room)
+
+    implementation(libs.firebase.bom)
+    implementation(libs.firebase.analytics)
+    implementation(libs.firebase.common.ktx)
+    implementation(libs.firebase.database.ktx)
+
 //    implementation(libs.androidx.room.c)
 //    implementation(libs.androidx.room.ktx)
     implementation(libs.retrofit)

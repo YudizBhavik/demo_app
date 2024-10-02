@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.yudizapplication.FCM.FCMExample
 import com.example.yudizapplication.IntentExample.IntentExample
 import com.example.yudizapplication.Multithreading.Example1
 import com.example.yudizapplication.Multithreading.OnBoardingScreen2
@@ -59,6 +60,7 @@ class OnBoardingScreen : AppCompatActivity() {
        val btn_todo = findViewById<Button>(R.id.btn_roomdb)
        val btn_retrofit = findViewById<Button>(R.id.btn_retrofit)
         val btn_multithreading = findViewById<Button>(R.id.btn_multithreading)
+        val btn_fcmExample = findViewById<Button>(R.id.btn_fcmExample)
 
         activity.setOnClickListener {
             intent = Intent(this, FirstScreen::class.java)
@@ -146,6 +148,10 @@ class OnBoardingScreen : AppCompatActivity() {
         }
         btn_multithreading.setOnClickListener {
             intent = Intent(this, OnBoardingScreen2::class.java)
+            startActivity(intent)
+        }
+        btn_fcmExample.setOnClickListener {
+            intent = Intent(this, FCMExample::class.java)
             startActivity(intent)
         }
 

@@ -36,10 +36,9 @@
         android:layout_centerHorizontal="true"
         android:text="Add person"
         android:background="@drawable/bt_style"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="10dp"
         app:layout_constraintStart_toEndOf="@+id/btn_show_all"
         app:layout_constraintTop_toTopOf="@+id/btn_show_all"
-
         android:layout_marginBottom="50dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

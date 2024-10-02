@@ -1,6 +1,9 @@
 [versions]
 agp = "8.6.0"
 compiler = "1.1.1"
+firebaseAnalytics = "22.1.2"
+firebaseBom = "33.3.0"
+firebaseCommonKtx = "21.0.0"
 kotlin = "1.9.23"
 coreKtx = "1.10.1"
 junit = "4.13.2"
@@ -20,15 +23,17 @@ glide = "4.11.0"
 coil = "2.7.0"
 coilgif = "2.7.0"
 room = "2.6.1"
-room_compiler = "2.6.1"
-room_ktx = "2.6.1"
+
 googleGmsGoogleServices = "4.4.2"
 firebaseMessaging = "24.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
-compiler = { module = "android.arch.persistence.room:compiler", version.ref = "compiler" }
+
+firebase-analytics = { module = "com.google.firebase:firebase-analytics", version.ref = "firebaseAnalytics" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-common-ktx = { module = "com.google.firebase:firebase-common-ktx", version.ref = "firebaseCommonKtx" }
+firebase-database-ktx = { module = "com.google.firebase:firebase-database-ktx", version.ref = "firebaseCommonKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }

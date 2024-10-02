@@ -311,6 +311,19 @@
             android:text="22. Multithreading"
             android:textColor="@color/white"
             android:background="@drawable/bt_style"/>
+        <Button
+            android:id="@+id/btn_fcmExample"
+            android:hapticFeedbackEnabled="true"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_below="@+id/btn_multithreading"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="23. FCM"
+            android:textColor="@color/white"
+            android:background="@drawable/bt_style"/>
     </RelativeLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

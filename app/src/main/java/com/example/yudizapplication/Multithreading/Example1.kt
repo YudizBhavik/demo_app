@@ -28,7 +28,7 @@ class Example1 : AppCompatActivity() {
             Thread{
                val result_add = edit_text_1.text.toString().toInt() + edit_text_2.text.toString().toInt()
                 Handler(Looper.getMainLooper()).post{
-                    result.setText("${result_add}")
+                    result.setText("Addition is ${result_add}")
                 }
             }.start()
         }

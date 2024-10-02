@@ -21,13 +21,14 @@
 
     <EditText
         android:id="@+id/edit_first_number"
-        android:layout_width="400dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:inputType="number"
         android:hint="Enter First Number"
         android:paddingHorizontal="20dp"
         android:textColorHint="@color/black"
         android:textColor="@color/black"
+        android:layout_marginHorizontal="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -49,7 +50,7 @@
         android:textAlignment="textStart"/>
     <EditText
         android:id="@+id/edit_second_number"
-        android:layout_width="400dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:inputType="number"
         android:hint="Enter Second Number"

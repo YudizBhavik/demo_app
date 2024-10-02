@@ -6,7 +6,7 @@
     android:background="@drawable/bg_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.OnBoardingScreen2">
+    tools:context=".Multithreading.OnBoardingScreen2">
 
     <ImageView
         android:id="@+id/yudiz_logo"
@@ -18,11 +18,11 @@
         android:layout_height="wrap_content"
         android:src="@drawable/img"/>
     <Button
-        android:id="@+id/recyclerView_Btn"
+        android:id="@+id/example_1"
         android:layout_marginTop="50dp"
         android:textStyle="bold"
         android:textSize="15sp"
-        android:text="@string/_6_recyclerview"
+        android:text="Example 1"
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/yudiz_logo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,81 +31,43 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bt_style"/>
     <Button
-        android:id="@+id/btn_coordinator"
+        android:id="@+id/example_2"
         android:hapticFeedbackEnabled="true"
         android:textStyle="bold"
         android:textSize="15sp"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/recyclerView_Btn"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView_Btn"
+        app:layout_constraintStart_toStartOf="@+id/example_1"
+        app:layout_constraintTop_toBottomOf="@+id/example_1"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="@string/_7_coordinator"
+        android:text="Example 2"
         android:textColor="@color/white"
         android:background="@drawable/bt_style"/>
     <Button
-        android:id="@+id/btn_snackbar"
+        android:id="@+id/example_3"
         android:hapticFeedbackEnabled="true"
         android:textStyle="bold"
         android:textSize="15sp"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/btn_coordinator"
-        app:layout_constraintTop_toBottomOf="@+id/btn_coordinator"
+        app:layout_constraintStart_toStartOf="@+id/example_2"
+        app:layout_constraintTop_toBottomOf="@+id/example_2"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="@string/_8_snackbar"
+        android:text="Example 3"
         android:textColor="@color/white"
         android:background="@drawable/bt_style"/>
     <Button
-        android:id="@+id/btn_font"
+        android:id="@+id/example_4"
         android:hapticFeedbackEnabled="true"
         android:textStyle="bold"
         android:textSize="15sp"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/btn_snackbar"
-        app:layout_constraintTop_toBottomOf="@+id/btn_snackbar"
+        app:layout_constraintStart_toStartOf="@+id/example_3"
+        app:layout_constraintTop_toBottomOf="@+id/example_3"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="@string/font"
+        android:text="Example 4"
         android:textColor="@color/white"
         android:background="@drawable/bt_style"/>
-    <Button
-        android:id="@+id/menu"
-        android:hapticFeedbackEnabled="true"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/btn_font"
-        app:layout_constraintTop_toBottomOf="@+id/btn_font"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="@string/Menu"
-        android:textColor="@color/white"
-        android:background="@drawable/bt_style"/>
-    <Button
-        android:id="@+id/btn_dialog"
-        android:hapticFeedbackEnabled="true"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/menu"
-        app:layout_constraintTop_toBottomOf="@+id/menu"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="11. Dialog"
-        android:textColor="@color/white"
-        android:background="@drawable/bt_style"/>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_btn_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:scaleX="1.1"
-        android:scaleY="1.1"
-        app:fabSize="normal"
-        android:src="@drawable/baseline_arrow_back_ios_new_24"
-        app:maxImageSize="30dp"
-        app:layout_constraintTop_toBottomOf="@id/btn_dialog"
-        app:layout_constraintStart_toStartOf="@id/menu"
-        app:layout_constraintEnd_toEndOf="@id/menu"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

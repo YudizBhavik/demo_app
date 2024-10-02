@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.yudizapplication.IntentExample.IntentExample
 import com.example.yudizapplication.Multithreading.Example1
+import com.example.yudizapplication.Multithreading.OnBoardingScreen2
 import com.example.yudizapplication.Retrofit.RetrofitExampleScreen
 import com.example.yudizapplication.activity.FirstScreen
 import com.example.yudizapplication.coil.CoilExample
@@ -144,7 +145,7 @@ class OnBoardingScreen : AppCompatActivity() {
             startActivity(intent)
         }
         btn_multithreading.setOnClickListener {
-            intent = Intent(this, Example1::class.java)
+            intent = Intent(this, OnBoardingScreen2::class.java)
             startActivity(intent)
         }
 

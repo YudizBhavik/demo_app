@@ -24,7 +24,13 @@
         android:theme="@style/Base.Theme.YudizApplication"
         tools:targetApi="34">
         <activity
-            android:name=".Multithreading.SecondTask"
+            android:name=".Multithreading.Example3"
+            android:exported="false" />
+        <activity
+            android:name=".Multithreading.Example4"
+            android:exported="false" />
+        <activity
+            android:name=".Multithreading.Example2"
             android:exported="false" />
         <activity
             android:name=".Multithreading.Example1"
@@ -115,7 +121,7 @@
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".views.OnBoardingScreen2"
+            android:name=".Multithreading.OnBoardingScreen2"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity

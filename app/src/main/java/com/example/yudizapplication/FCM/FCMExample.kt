@@ -1,21 +1,40 @@
 package com.example.yudizapplication.FCM
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.yudizapplication.R
+import com.example.yudizapplication.databinding.ActivityFcmexampleBinding
+import com.google.firebase.messaging.FirebaseMessaging
 
 class FCMExample : AppCompatActivity() {
+    var TAG = "FCMActivity"
+    var binding: ActivityFcmexampleBinding? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_fcmexample)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        binding = ActivityFcmexampleBinding.inflate(layoutInflater)
+        setContentView(binding!!.root)
+        binding?.getToken?.setOnClickListener {
+            v ->
+            FirebaseMessaging.getInstance().token
+                .addOnCompleteListener { task ->
+                    // this fail
+                    if (!task.isSuccessful) {
+                        Log.d(
+                            TAG,
+                            "Fetching FCM registration token failed",
+                            task.exception
+                        )
+                        return@addOnCompleteListener
+                    }
+
+                    val token = task.result
+                    //to showing
+                    binding!!.token.setText(token)
+                    Toast.makeText(this@FCMExample, "get a token", Toast.LENGTH_SHORT).show()
+                }
         }
+//
     }
 }

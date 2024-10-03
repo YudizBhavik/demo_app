@@ -29,7 +29,7 @@
             android:resource="@drawable/img" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/white_background" />
+            android:resource="@color/white" />
 
         <activity
             android:name=".FCM.FCMExample"
@@ -189,7 +189,7 @@
             android:exported="false"
             android:theme="@style/Theme.YudizApplication" />
 
-        <service android:name=".FCM.MyFirebaseMessagingServices"
+        <service android:name=".FCM.FirebaseMessagingServices"
             android:exported="false" >
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>

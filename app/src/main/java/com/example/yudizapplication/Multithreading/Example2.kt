@@ -1,39 +1,62 @@
 package com.example.yudizapplication.Multithreading
-import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
+
+import android.os.*
 import android.widget.TextView
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.example.yudizapplication.R
 
 
 class Example2 : AppCompatActivity() {
-    private lateinit var temp_result_txt : TextView
-    private lateinit var result_txt : TextView
 
-    private val handler = Handler(Looper.getMainLooper())
+    private var number = 10
+    private lateinit var tempTxt: TextView
+    private lateinit var resultTxt: TextView
+
+    private val handler = object : Handler(Looper.getMainLooper()) {
+        override fun handleMessage(msg: Message) {
+            when (msg.what) {
+                1 -> {
+                    val operation1Result = msg.arg1
+                    tempTxt.text = "Result after 1st thread: $operation1Result"
+                    val thread2 = Thread {
+//                        val operation2Result = operation1Result + 10
+//                        val message = handler.obtainMessage
+                    }
+                    thread2.start()
+                }
+                2 -> {
+                    val finalResult = msg.arg1
+                    resultTxt.text = "Final result after 2nd thread: $finalResult"
+                }
+            }
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContentView(R.layout.activity_second_task2)
 
-        temp_result_txt = findViewById(R.id.temp_result_txt)
-        result_txt = findViewById(R.id.result_txt)
-        startMultithreadingProcess(5)
-    }
-    private fun startMultithreadingProcess(value: Int) {
-        Thread {
-            val tempResult = value + 10
-            handler.post {
-                temp_result_txt.text = "Temp Result: $tempResult"
-            }
-            Thread {
-                val finalResult = tempResult * 2
-                handler.post {
-                    result_txt.text = "Final Result: $finalResult"
-                }
-            }.start()
-        }.start()
+        tempTxt = findViewById(R.id.temp_result_txt)
+        resultTxt = findViewById(R.id.result_txt)
+
+        val thread1 = Thread {
+            val operation1Result = number * 2
+            val message = handler.obtainMessage(1, operation1Result, 0)
+            handler.sendMessage(message)
+        }
+        thread1.start()
+
+
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
     }
 }
 

@@ -71,7 +71,7 @@
     <string name="btn_clear">CLEAR</string>
     <string name="btn_next">Next</string>
     <string name="_16_intent_example">16. Intent Example</string>
-
+    <string name="default_notification_channel_id">123456</string>
 
     <string name="HTML_text">A good example of a paragraph contains a topic sentence, details and a conclusion. \'There are many different kinds of animals that live in China. Tigers and leopards are animals that live in China\'s forests in the north. In the jungles, monkeys swing in the trees and elephants walk through the brush</string>
     <string name="_18_glide">18. Glide</string>

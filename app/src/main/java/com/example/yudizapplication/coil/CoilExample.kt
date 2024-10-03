@@ -20,17 +20,13 @@ class CoilExample : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_coil_example)
 
-
         val btn_image_load = findViewById<Button>(R.id.btn_coli_loadimg)
         val imageView_image_load = findViewById<ImageView>(R.id.imageview_coil)
         val btn_gif_load = findViewById<Button>(R.id.btn_coli_load_gif)
         val imageView_gif_load = findViewById<ImageView>(R.id.imageview_gif_coil)
 
-
-
         btn_image_load.setOnClickListener {
-
-            val url = "https://picsum.photos/200/300"
+            val url = "https://picsum.photos/300"
            imageView_image_load.load(url)
             {
                 crossfade(true)

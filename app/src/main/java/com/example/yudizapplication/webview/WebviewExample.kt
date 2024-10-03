@@ -1,12 +1,15 @@
 package com.example.yudizapplication.webview
 
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Button
 import android.window.OnBackInvokedDispatcher
+import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -17,6 +20,7 @@ class WebviewExample : AppCompatActivity() {
 
     lateinit var webview : WebView
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_webview_example)
@@ -30,12 +34,16 @@ class WebviewExample : AppCompatActivity() {
             webview.webViewClient = WebViewClient()
             webview.loadUrl("https://www.google.com/")
             webview.settings.javaScriptEnabled = true
+            webview.settings.textZoom
+            webview.settings.safeBrowsingEnabled = true
+            webview.settings.cursiveFontFamily
             webview.settings.setSupportZoom(true)
             btn_tap_youtube.setText("TAP TO REFRESH")
             if (!temp){
-                btn_tap_youtube.visibility = View.VISIBLE
+                btn_tap_youtube.visibility = View.INVISIBLE
             }else{
                 btn_tap_html.visibility = View.INVISIBLE
+                btn_tap_youtube.visibility = View.INVISIBLE
             }
         }
         btn_tap_html.setOnClickListener {
@@ -50,6 +58,13 @@ class WebviewExample : AppCompatActivity() {
             }
         }
 
+    }
 
+    override fun onBackPressed() {
+        if (webview.canGoBack()){
+            webview.goBack()
+        }else {
+            super.onBackPressed()
+        }
     }
 }

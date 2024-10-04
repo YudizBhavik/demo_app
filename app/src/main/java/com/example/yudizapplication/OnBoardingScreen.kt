@@ -10,6 +10,8 @@ import com.example.yudizapplication.IntentExample.IntentExample
 import com.example.yudizapplication.Multithreading.Example1
 import com.example.yudizapplication.Multithreading.OnBoardingScreen2
 import com.example.yudizapplication.Retrofit.RetrofitExampleScreen
+import com.example.yudizapplication.Workmanager.WorkManagerExample
+import com.example.yudizapplication.Workmanager.WorkManagerSecondExample
 import com.example.yudizapplication.activity.FirstScreen
 import com.example.yudizapplication.coil.CoilExample
 import com.example.yudizapplication.coordinator.CoordinatorScreen
@@ -59,8 +61,9 @@ class OnBoardingScreen : AppCompatActivity() {
        val btn_coil = findViewById<Button>(R.id.btn_coil)
        val btn_todo = findViewById<Button>(R.id.btn_roomdb)
        val btn_retrofit = findViewById<Button>(R.id.btn_retrofit)
-        val btn_multithreading = findViewById<Button>(R.id.btn_multithreading)
-        val btn_fcmExample = findViewById<Button>(R.id.btn_fcmExample)
+       val btn_multithreading = findViewById<Button>(R.id.btn_multithreading)
+       val btn_fcmExample = findViewById<Button>(R.id.btn_fcmExample)
+       val btn_workmanager = findViewById<Button>(R.id.btn_workmanager)
 
         activity.setOnClickListener {
             intent = Intent(this, FirstScreen::class.java)
@@ -152,6 +155,10 @@ class OnBoardingScreen : AppCompatActivity() {
         }
         btn_fcmExample.setOnClickListener {
             intent = Intent(this, FCMExample::class.java)
+            startActivity(intent)
+        }
+        btn_workmanager.setOnClickListener {
+            intent = Intent(this, WorkManagerSecondExample::class.java)
             startActivity(intent)
         }
 

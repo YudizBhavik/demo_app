@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import coil.ImageLoader
 import coil.decode.ImageDecoderDecoder
 import coil.load
+import coil.request.CachePolicy
 import coil.transform.RoundedCornersTransformation
 import com.example.yudizapplication.R
 
@@ -26,16 +27,13 @@ class CoilExample : AppCompatActivity() {
         val imageView_gif_load = findViewById<ImageView>(R.id.imageview_gif_coil)
 
         btn_image_load.setOnClickListener {
-            val url = "https://picsum.photos/300"
+            val url = "https://picsum.photos/200/300"
            imageView_image_load.load(url)
-            {
-                crossfade(true)
-                crossfade(1000)
-                placeholder(R.drawable.placeholder)
-                transformations(RoundedCornersTransformation(30f))
-            }
+           {
+               diskCachePolicy(CachePolicy.DISABLED)
+               memoryCachePolicy(CachePolicy.DISABLED)
+           }
         }
-
 
         btn_gif_load.setOnClickListener {
             val url_gif =

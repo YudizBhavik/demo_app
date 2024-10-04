@@ -23,6 +23,12 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.YudizApplication"
         tools:targetApi="34">
+        <activity
+            android:name=".Workmanager.WorkManagerSecondExample"
+            android:exported="false" />
+        <activity
+            android:name=".Workmanager.WorkManagerExample"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
@@ -189,10 +195,11 @@
             android:exported="false"
             android:theme="@style/Theme.YudizApplication" />
 
-        <service android:name=".FCM.FirebaseMessagingServices"
-            android:exported="false" >
+        <service
+            android:name=".FCM.FirebaseMessagingServices"
+            android:exported="false">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
     </application>

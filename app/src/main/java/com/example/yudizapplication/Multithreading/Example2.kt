@@ -21,11 +21,7 @@ class Example2 : AppCompatActivity() {
                 1 -> {
                     val operation1Result = msg.arg1
                     tempTxt.text = "Result after 1st thread: $operation1Result"
-                    val thread2 = Thread {
-//                        val operation2Result = operation1Result + 10
-//                        val message = handler.obtainMessage
-                    }
-                    thread2.start()
+
                 }
                 2 -> {
                     val finalResult = msg.arg1
@@ -51,6 +47,13 @@ class Example2 : AppCompatActivity() {
         thread1.start()
 
 
+         val thread2 = Thread {
+//         val operation2Result = operation1Result + 10
+//         val message = handler.obtainMessage(2, operation2Result, 0)
+
+//            handler.sendMessage(message)
+        }
+        thread2.start()
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

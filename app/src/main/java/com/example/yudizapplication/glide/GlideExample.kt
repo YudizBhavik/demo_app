@@ -15,8 +15,6 @@ import com.example.yudizapplication.databinding.ActivityMainBinding
 
 class GlideExample : AppCompatActivity() {
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -32,12 +30,12 @@ class GlideExample : AppCompatActivity() {
             Glide.with(this)
                 .load(url)
                 .into(imageView_gif_load)
-
         }
 
 
        btn_image_load.setOnClickListener {
            val url = "https://picsum.photos/200/300"
+
 
            Glide.with(this)
                .load(url)
@@ -46,6 +44,5 @@ class GlideExample : AppCompatActivity() {
                .placeholder(R.drawable.placeholder)
                .into(imageView_image_load)
        }
-
     }
 }

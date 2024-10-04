@@ -62,6 +62,7 @@ dependencies {
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.common.ktx)
     implementation(libs.firebase.database.ktx)
+    implementation ("androidx.work:work-runtime-ktx:2.8.1")
 
 //    implementation(libs.androidx.room.c)
 //    implementation(libs.androidx.room.ktx)

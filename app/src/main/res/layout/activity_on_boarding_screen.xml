@@ -3,340 +3,387 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@drawable/bg_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_home"
     tools:context=".OnBoardingScreen">
 
 
     <ImageView
         android:id="@+id/yudiz_logo"
-        android:layout_marginTop="100dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/img"/>
+        android:layout_marginTop="100dp"
+        android:src="@drawable/img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:id="@+id/scroll_id"
         android:layout_width="0dp"
         android:layout_height="390dp"
-        app:layout_constraintTop_toBottomOf="@id/yudiz_logo"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/yudiz_logo">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="250dp">
-    <Button
-        android:id="@+id/btn_activity"
-        android:layout_marginTop="50dp"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_centerHorizontal="true"
-        android:text="@string/activity"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bt_style"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
 
-    <Button
-        android:id="@+id/btn_layout"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:text="@string/layout"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/btn_activity"
-        android:background="@drawable/bt_style"/>
+            <Button
+                android:id="@+id/btn_activity"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/bt_style"
+                android:text="@string/activity"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btn_view"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/btn_layout"
-        android:text="@string/views"
-        android:background="@drawable/bt_style"/>
+            <Button
+                android:id="@+id/btn_layout"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_activity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:text="@string/layout"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btn_selector"
-        android:hapticFeedbackEnabled="true"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_marginTop="10dp"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="@string/_4_selector"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/btn_view"
-        android:background="@drawable/bt_style"/>
+            <Button
+                android:id="@+id/btn_view"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:text="@string/views"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btn_viewpagger"
-        android:hapticFeedbackEnabled="true"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_marginTop="10dp"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="@string/_5_selector"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/btn_selector"
-        android:background="@drawable/bt_style"/>
+            <Button
+                android:id="@+id/btn_selector"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/_4_selector"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btn_recyclerView"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:text="@string/_6_recyclerview"
-            android:textColor="@color/white"
-            android:layout_below="@id/btn_viewpagger"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bt_style"/>
-        <Button
-            android:id="@+id/btn_coordinator"
-            android:hapticFeedbackEnabled="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/btn_recyclerView"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="@string/_7_coordinator"
-            android:textColor="@color/white"
-            android:background="@drawable/bt_style"/>
-        <Button
-            android:id="@+id/btn_snackbar"
-            android:hapticFeedbackEnabled="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_below="@+id/btn_coordinator"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="@string/_8_snackbar"
-            android:textColor="@color/white"
-            android:background="@drawable/bt_style"/>
-        <Button
-            android:id="@+id/btn_font"
-            android:hapticFeedbackEnabled="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_below="@+id/btn_snackbar"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="@string/font"
-            android:textColor="@color/white"
-            android:background="@drawable/bt_style"/>
-        <Button
-            android:id="@+id/menu"
-            android:hapticFeedbackEnabled="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_below="@+id/btn_font"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="@string/Menu"
-            android:textColor="@color/white"
-            android:background="@drawable/bt_style"/>
-        <Button
-            android:id="@+id/btn_dialog"
-            android:hapticFeedbackEnabled="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_below="@+id/menu"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="@string/_11_dialog"
-            android:textColor="@color/white"
-            android:background="@drawable/bt_style"/>
-        <Button
-            android:id="@+id/btn_S_activity"
-            android:hapticFeedbackEnabled="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_below="@+id/btn_dialog"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="@string/_12_start_act"
-            android:textColor="@color/white"
-            android:background="@drawable/bt_style"/>
-        <Button
-            android:id="@+id/fragment_exp"
-            android:hapticFeedbackEnabled="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_below="@+id/btn_S_activity"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="@string/_13_fragment"
-            android:textColor="@color/white"
-            android:background="@drawable/bt_style"/>
-     <Button
-            android:id="@+id/user_permission"
-            android:hapticFeedbackEnabled="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_below="@+id/fragment_exp"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="@string/_14_user_permission"
-            android:textColor="@color/white"
-            android:background="@drawable/bt_style"/>
-    <Button
-            android:id="@+id/btn_sharedpreferences"
-            android:hapticFeedbackEnabled="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_below="@+id/user_permission"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="@string/_15_sharedpreference"
-            android:textColor="@color/white"
-            android:background="@drawable/bt_style"/>
-        <Button
-            android:id="@+id/btn_intent_exp"
-            android:hapticFeedbackEnabled="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_below="@+id/btn_sharedpreferences"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="@string/_16_intent_example"
-            android:textColor="@color/white"
-            android:background="@drawable/bt_style"/>
-        <Button
-            android:id="@+id/btn_webview"
-            android:hapticFeedbackEnabled="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_below="@+id/btn_intent_exp"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="@string/_17_webview"
-            android:textColor="@color/white"
-            android:background="@drawable/bt_style"/>
-        <Button
-            android:id="@+id/btn_Glide"
-            android:hapticFeedbackEnabled="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_below="@+id/btn_webview"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="@string/_18_glide"
-            android:textColor="@color/white"
-            android:background="@drawable/bt_style"/>
-        <Button
-            android:id="@+id/btn_coil"
-            android:hapticFeedbackEnabled="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_below="@+id/btn_Glide"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="19. Coil"
-            android:textColor="@color/white"
-            android:background="@drawable/bt_style"/>
-     <Button
-            android:id="@+id/btn_roomdb"
-            android:hapticFeedbackEnabled="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_below="@+id/btn_coil"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="20. Room Database"
-            android:textColor="@color/white"
-            android:background="@drawable/bt_style"/>
-        <Button
-            android:id="@+id/btn_retrofit"
-            android:hapticFeedbackEnabled="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_below="@+id/btn_roomdb"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="21. Retrofit"
-            android:textColor="@color/white"
-            android:background="@drawable/bt_style"/>
-      <Button
-            android:id="@+id/btn_multithreading"
-            android:hapticFeedbackEnabled="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_below="@+id/btn_retrofit"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="22. Multithreading"
-            android:textColor="@color/white"
-            android:background="@drawable/bt_style"/>
-        <Button
-            android:id="@+id/btn_fcmExample"
-            android:hapticFeedbackEnabled="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_below="@+id/btn_multithreading"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="23. FCM"
-            android:textColor="@color/white"
-            android:background="@drawable/bt_style"/>
-        <Button
-            android:id="@+id/btn_workmanager"
-            android:hapticFeedbackEnabled="true"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_below="@+id/btn_fcmExample"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="24. WorkManager"
-            android:textColor="@color/white"
-            android:background="@drawable/bt_style"/>
-    </RelativeLayout>
+            <Button
+                android:id="@+id/btn_viewpagger"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_selector"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/_5_selector"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_recyclerView"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_viewpagger"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:text="@string/_6_recyclerview"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_coordinator"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_recyclerView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/_7_coordinator"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_snackbar"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_coordinator"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/_8_snackbar"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_font"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_snackbar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/font"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/menu"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_font"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/Menu"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_dialog"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/menu"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/_11_dialog"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_S_activity"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_dialog"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/_12_start_act"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/fragment_exp"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_S_activity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/_13_fragment"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/user_permission"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fragment_exp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/_14_user_permission"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_sharedpreferences"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_permission"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/_15_sharedpreference"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_intent_exp"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_sharedpreferences"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/_16_intent_example"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_webview"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_intent_exp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/_17_webview"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_Glide"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_webview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/_18_glide"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_coil"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_Glide"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="19. Coil"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_roomdb"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_coil"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="20. Room Database"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_retrofit"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_roomdb"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="21. Retrofit"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_multithreading"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_retrofit"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="22. Multithreading"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_fcmExample"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_multithreading"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="23. FCM"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_workmanager"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_fcmExample"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="24. WorkManager"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
     </ScrollView>
+
+    <Switch
+        android:id="@+id/demo_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="50dp"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:thumb="@drawable/switch_theme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="DEMO"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/demo_switch"
+        app:layout_constraintTop_toBottomOf="@id/demo_switch" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

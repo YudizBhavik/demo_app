@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:theme="@style/Theme.Demo.Application"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".demo_app.Screens.HomeScreen">
+
+    <ImageView
+        android:id="@+id/burger_img_1"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:src="@drawable/burger_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="50dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txt_try_burger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_try_best"
+        android:textSize="47sp"
+        android:fontFamily="@font/baloo_regular"
+        android:lineSpacingExtra="-20dp"
+        app:layout_constraintTop_toBottomOf="@id/burger_img_1"
+        app:layout_constraintStart_toStartOf="@id/burger_img_1"
+        app:layout_constraintEnd_toEndOf="@id/burger_img_1"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/txt_find_flavour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/txt_find_different"
+        android:textSize="25sp"
+        android:fontFamily="@font/baloo_regular"
+        app:layout_constraintTop_toBottomOf="@id/txt_try_burger"
+        app:layout_constraintStart_toStartOf="@id/txt_try_burger"
+        app:layout_constraintEnd_toEndOf="@id/txt_try_burger"
+        android:layout_marginTop="25dp" />
+
+    <LinearLayout
+        android:layout_width="230dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/view_system"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txt_try_burger"
+        app:layout_constraintStart_toStartOf="@id/txt_try_burger">
+        <TextView
+            android:id="@+id/txt_system_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:text="System Follow"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/fab_next"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/btn_next"
+            android:foreground="@drawable/baseline_navigate_next_24" />
+    </LinearLayout>
+    <Switch
+        android:id="@+id/setting_switch"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

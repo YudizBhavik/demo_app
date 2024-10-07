@@ -13,14 +13,12 @@
         <item name="colorPrimaryVariant">@color/teal_700</item>
         <item name="colorOnPrimary">@color/black</item>
     </style>
-
-
     <style name="Theme.snackbar" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="snackbarStyle">@style/Widget.Design.Snackbar</item>
         <item name="snackbarButtonStyle">@style/ThemeOverlay.Material3.Button.TextButton.Snackbar</item>
     </style>
-
-    <!-- Customize light theme attributes here -->
-
-
+    <style name="Theme.Demo.Application" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:background">@color/background_demo_white</item>
+        <item name="android:textColor">@color/text_color_demo</item>
+    </style>
 </resources>

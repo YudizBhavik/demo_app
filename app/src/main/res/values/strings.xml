@@ -76,4 +76,8 @@
     <string name="HTML_text">A good example of a paragraph contains a topic sentence, details and a conclusion. \'There are many different kinds of animals that live in China. Tigers and leopards are animals that live in China\'s forests in the north. In the jungles, monkeys swing in the trees and elephants walk through the brush</string>
     <string name="_18_glide">18. Glide</string>
     <string name="_17_webview">17. WebView</string>
+    <string name="txt_workmanager_testing">WorkManager Testing</string>
+    <string name="demo_apk_start">DEMO APK START</string>
+    <string name="txt_find_different">Find different flavours and enjoy \nthem at every moment</string>
+    <string name="txt_try_best">Try the best\nburger now!</string>
 </resources>

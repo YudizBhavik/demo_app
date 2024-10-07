@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/bg_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".demo_app.DemoApplication">
+
+    <Button
+        android:id="@+id/btn_demo_apk_start"
+        android:hapticFeedbackEnabled="true"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/demo_apk_start"
+        android:textColor="@color/white"
+        android:background="@drawable/bt_style"/>
+    <Button
+        android:id="@+id/btn_web_demo_apk_start"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/btn_demo_apk_start"
+        app:layout_constraintStart_toStartOf="@id/btn_demo_apk_start"
+        android:layout_marginTop="10dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Web Demo"
+        android:textColor="@color/white"
+        android:background="@drawable/bt_style"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

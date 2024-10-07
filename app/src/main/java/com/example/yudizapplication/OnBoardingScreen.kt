@@ -3,6 +3,8 @@ package com.example.yudizapplication
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Switch
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.yudizapplication.FCM.FCMExample
@@ -15,6 +17,7 @@ import com.example.yudizapplication.Workmanager.WorkManagerSecondExample
 import com.example.yudizapplication.activity.FirstScreen
 import com.example.yudizapplication.coil.CoilExample
 import com.example.yudizapplication.coordinator.CoordinatorScreen
+import com.example.yudizapplication.demo_app.DemoApplication
 import com.example.yudizapplication.dialog.AddUserScreen
 import com.example.yudizapplication.exp_menu.ContextScreen
 import com.example.yudizapplication.fontExample.FontScreen
@@ -39,6 +42,7 @@ class OnBoardingScreen : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_on_boarding_screen)
 
+        val isChecked = true
 
        var activity = findViewById<Button>(R.id.btn_activity)
        var layout = findViewById<Button>(R.id.btn_layout)
@@ -64,6 +68,7 @@ class OnBoardingScreen : AppCompatActivity() {
        val btn_multithreading = findViewById<Button>(R.id.btn_multithreading)
        val btn_fcmExample = findViewById<Button>(R.id.btn_fcmExample)
        val btn_workmanager = findViewById<Button>(R.id.btn_workmanager)
+       val switch_demo = findViewById<Switch>(R.id.demo_switch)
 
         activity.setOnClickListener {
             intent = Intent(this, FirstScreen::class.java)
@@ -161,6 +166,13 @@ class OnBoardingScreen : AppCompatActivity() {
             intent = Intent(this, WorkManagerSecondExample::class.java)
             startActivity(intent)
         }
-
+        switch_demo.setOnClickListener{
+                if (isChecked) {
+                    intent = Intent(this, DemoApplication::class.java)
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(applicationContext, "Switch Off", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 }

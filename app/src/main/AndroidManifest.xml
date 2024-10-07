@@ -24,6 +24,19 @@
         android:theme="@style/Base.Theme.YudizApplication"
         tools:targetApi="34">
         <activity
+            android:name=".demo_app.Screens.WebViewDarkMode"
+            android:exported="false" />
+        <activity
+            android:name=".demo_app.Screens.SettingsScreen"
+            android:exported="false" />
+        <activity
+            android:name=".demo_app.Screens.HomeScreen"
+            android:exported="false"
+            android:theme="@style/Theme.Demo.Application" />
+        <activity
+            android:name=".demo_app.DemoApplication"
+            android:exported="false" />
+        <activity
             android:name=".Workmanager.WorkManagerSecondExample"
             android:exported="false" />
         <activity

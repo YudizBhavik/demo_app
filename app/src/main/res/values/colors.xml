@@ -20,4 +20,11 @@
         <color name="sky_background">#279AED</color>
         <color name="see_btn_color">#E5E5E5</color>
         <color name="edit_home_font">#CFCFCF</color>
+
+
+    <color name="primarycolor_demo">#F36F2F</color>
+    <color name="text_color_demo">#0f0f0f</color>
+    <color name="icon_color_demo">#989898</color>
+    <color name="background_demo_white">#F6F6F6</color>
+
 </resources>

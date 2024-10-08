@@ -9,6 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.yudizapplication.FCM.FCMExample
 import com.example.yudizapplication.IntentExample.IntentExample
+import com.example.yudizapplication.Maps.MapsExample
 import com.example.yudizapplication.Multithreading.Example1
 import com.example.yudizapplication.Multithreading.OnBoardingScreen2
 import com.example.yudizapplication.Retrofit.RetrofitExampleScreen
@@ -69,6 +70,7 @@ class OnBoardingScreen : AppCompatActivity() {
        val btn_fcmExample = findViewById<Button>(R.id.btn_fcmExample)
        val btn_workmanager = findViewById<Button>(R.id.btn_workmanager)
        val switch_demo = findViewById<Switch>(R.id.demo_switch)
+        val btn_maps = findViewById<Button>(R.id.btn_maps)
 
         activity.setOnClickListener {
             intent = Intent(this, FirstScreen::class.java)
@@ -167,12 +169,16 @@ class OnBoardingScreen : AppCompatActivity() {
             startActivity(intent)
         }
         switch_demo.setOnClickListener{
-                if (isChecked) {
-                    intent = Intent(this, DemoApplication::class.java)
-                    startActivity(intent)
-                } else {
-                    Toast.makeText(applicationContext, "Switch Off", Toast.LENGTH_SHORT).show()
-                }
+            if (isChecked) {
+                intent = Intent(this, DemoApplication::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(applicationContext, "Switch Off", Toast.LENGTH_SHORT).show()
             }
+        }
+        btn_maps.setOnClickListener {
+            intent = Intent(this, MapsExample::class.java)
+            startActivity(intent)
+        }
     }
 }

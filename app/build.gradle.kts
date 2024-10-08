@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.ir.backend.js.compile
+import java.util.Properties
 
 plugins {
     alias(libs.plugins.android.application)
@@ -18,7 +19,6 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -70,6 +70,8 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     implementation(libs.firebase.messaging)
     implementation(libs.androidx.webkit)
+    implementation(libs.play.services.maps)
+    implementation(libs.play.services.location)
     testImplementation(libs.junit)
     kapt("androidx.room:room-compiler:2.6.1")
     annotationProcessor("androidx.room:room-compiler:2.6.1")

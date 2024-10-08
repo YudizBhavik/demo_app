@@ -27,6 +27,8 @@ room = "2.6.1"
 googleGmsGoogleServices = "4.4.2"
 firebaseMessaging = "24.0.1"
 webkit = "1.12.1"
+playServicesMaps = "19.0.0"
+playServicesLocation = "21.3.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -54,6 +56,8 @@ io-gif-coil = {group = "io.coil-kt" , name = "coil-gif", version.ref = "coilgif"
 androidx-room = {group = "androidx.room", name = "room-runtime", version.ref = "room"}
 firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
 androidx-webkit = { group = "androidx.webkit", name = "webkit", version.ref = "webkit" }
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
 
 
 

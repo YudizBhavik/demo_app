@@ -46,6 +46,7 @@
         android:layout_marginTop="25dp" />
 
     <LinearLayout
+        android:id="@+id/linear_system_follow"
         android:layout_width="230dp"
         android:layout_height="70dp"
         android:layout_marginBottom="20dp"
@@ -74,13 +75,44 @@
             android:background="@drawable/btn_next"
             android:foreground="@drawable/baseline_navigate_next_24" />
     </LinearLayout>
-    <Switch
-        android:id="@+id/setting_switch"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@android:color/transparent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/view_system"
+        app:layout_constraintBottom_toTopOf="@+id/linear_system_follow"
+        app:layout_constraintStart_toStartOf="@id/linear_system_follow"
+        app:layout_constraintEnd_toEndOf="@id/linear_system_follow" >
+
+        <Button
+            android:id="@+id/fab_light"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/btn_next"
+            android:foreground="@drawable/left_arrow" />
+        <TextView
+            android:id="@+id/txt_enable_disable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:text="Light Dark"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/fab_dark"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/btn_next"
+            android:foreground="@drawable/baseline_navigate_next_24" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,119 +2,145 @@ package com.example.yudizapplication.Maps
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.location.Geocoder
 import android.location.Location
 import android.os.Build
 import android.os.Bundle
+import android.widget.Button
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.yudizapplication.R
-import com.example.yudizapplication.databinding.ActivityMapsExampleBinding
-import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationCallback
-import com.google.android.gms.location.LocationResult
-import com.google.android.gms.location.LocationServices
+import com.google.android.gms.location.*
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.CameraPosition
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import java.util.Locale
 
 class MapsExample : AppCompatActivity(), OnMapReadyCallback {
 
-        private lateinit var mGoogleMap: GoogleMap
-        private lateinit var binding: ActivityMapsExampleBinding
-        val MY_PERMISSIONS_REQUEST_LOCATION = 99
+    private lateinit var mGoogleMap: GoogleMap
+    private val MY_PERMISSIONS_REQUEST_LOCATION = 2
+    private var mLastLocation: Location? = null
+    private lateinit var mFusedLocationClient: FusedLocationProviderClient
+    private lateinit var geocoder: Geocoder
 
-        var mLastLocation: Location? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_maps_example)
 
-        var mFusedLocationClient: FusedLocationProviderClient? = null
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+        geocoder = Geocoder(this, Locale.getDefault())
 
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-
-            binding = ActivityMapsExampleBinding.inflate(layoutInflater)
-            setContentView(binding.root)
-
-            mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-            val mapFragment = supportFragmentManager.findFragmentById(R.id.maps) as SupportMapFragment
-            mapFragment.getMapAsync(this)
+        val btnCurrentLocation = findViewById<Button>(R.id.btn_current_loc)
+        btnCurrentLocation.setOnClickListener {
+            getCurrentLocation()
         }
 
-        @RequiresApi(Build.VERSION_CODES.S)
-        override fun onMapReady(googleMap: GoogleMap) {
-            mGoogleMap = googleMap
+        val mapFragment = supportFragmentManager
+            .findFragmentById(R.id.maps) as SupportMapFragment
+        mapFragment.getMapAsync(this)
+    }
 
-            if (ContextCompat.checkSelfPermission(
-                    this, Manifest.permission.ACCESS_FINE_LOCATION
-                ) == PackageManager.PERMISSION_GRANTED
-            ) {
-                mGoogleMap.setMyLocationEnabled(true)
-            } else {
-                checkLocationPermission()
-            }
+    @RequiresApi(Build.VERSION_CODES.S)
+    override fun onMapReady(googleMap: GoogleMap) {
+        mGoogleMap = googleMap
+        if (checkLocationPermission()) {
+            mGoogleMap.isMyLocationEnabled = true
+        } else {
+            requestLocationPermission()
         }
 
-        override fun onPause() {
-            super.onPause()
-
-            mFusedLocationClient?.removeLocationUpdates(mLocationCallback)
+        mGoogleMap.setOnMapLongClickListener { latLng ->
+            addMarker(latLng)
         }
+    }
 
-        var mLocationCallback: LocationCallback = object : LocationCallback() {
-            override fun onLocationResult(locationResult: LocationResult) {
-                val locationList = locationResult.locations
-                if (locationList.size > 0) {
-
-                    val location = locationList[locationList.size - 1]
+    private fun getCurrentLocation() {
+        if (checkLocationPermission()) {
+            mFusedLocationClient.lastLocation.addOnSuccessListener { location: Location? ->
+                if (location != null) {
                     mLastLocation = location
                     val latLng = LatLng(location.latitude, location.longitude)
-                    val markerOptions = MarkerOptions()
-                    markerOptions.position(latLng)
-                    markerOptions.title(location.latitude.toString() + " : " + location.longitude)
-                    mGoogleMap.clear()
+                    addMarker(latLng, "You are here", R.drawable.car)
+                    mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15f))
+                    mGoogleMap.setMyLocationEnabled(false)
+                } else {
+                    Toast.makeText(this, "Unable to find location", Toast.LENGTH_SHORT).show()
+                }
+            }.addOnFailureListener {
+                Toast.makeText(this, "Failed to get location", Toast.LENGTH_SHORT).show()
+            }
+        } else {
+            requestLocationPermission()
+        }
+    }
 
-                    mGoogleMap.animateCamera(CameraUpdateFactory.newLatLng(latLng))
+    private fun addMarker(latLng: LatLng, title: String? = null, iconResId: Int? = null) {
+        val markerOptions = MarkerOptions()
+            .flat(true)
+            .position(latLng)
+            .title(title)
+            .icon(BitmapDescriptorFactory.fromResource(R.drawable.car)).anchor(0.5f,0.5f)
+        mGoogleMap.clear()
+        mGoogleMap.addMarker(markerOptions)
 
-                    mGoogleMap.addMarker(markerOptions)
-                    val cameraPosition =
-                        CameraPosition.Builder().target(LatLng(latLng.latitude, latLng.longitude))
-                            .zoom(18f).build()
-                    mGoogleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition))
+        mGoogleMap.setOnMarkerClickListener { marker ->
+            val addresses = geocoder.getFromLocation(marker.position.latitude, marker.position.longitude, 1)
+            if (addresses != null) {
+                if (addresses.isNotEmpty()) {
+                    val address = addresses[0].getAddressLine(0)
+                    Toast.makeText(this, address, Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(this, "Address not found", Toast.LENGTH_SHORT).show()
                 }
             }
+            false
         }
-        private fun checkLocationPermission() {
-            if (ContextCompat.checkSelfPermission(
-                    this, Manifest.permission.ACCESS_FINE_LOCATION
-                ) != PackageManager.PERMISSION_GRANTED
-            ) {
-                if (ActivityCompat.shouldShowRequestPermissionRationale(
-                        this, Manifest.permission.ACCESS_FINE_LOCATION
-                    )
-                ) {
-                    AlertDialog.Builder(this).setTitle("Location Permission Needed")
-                        .setMessage("This app needs the Location permission, please accept to use location functionality")
-                        .setPositiveButton(
-                            "OK"
-                        ) { _, i ->
-                            ActivityCompat.requestPermissions(
-                                this@MapsExample,
-                                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
-                                MY_PERMISSIONS_REQUEST_LOCATION
-                            )
-                        }.create().show()
-                } else {
-                    ActivityCompat.requestPermissions(
-                        this,
-                        arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
-                        MY_PERMISSIONS_REQUEST_LOCATION
-                    )
+    }
+
+    private fun checkLocationPermission(): Boolean {
+        return ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+    }
+
+    private fun requestLocationPermission() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
+            AlertDialog.Builder(this)
+                .setTitle("Location Permission Needed")
+                .setMessage("This app needs the Location permission, please accept the use location functionality")
+                .setPositiveButton("ok") { _, _ ->
+                    ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), MY_PERMISSIONS_REQUEST_LOCATION)
                 }
+                .create()
+                .show()
+        } else {
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), MY_PERMISSIONS_REQUEST_LOCATION)
+        }
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == MY_PERMISSIONS_REQUEST_LOCATION) {
+            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                if (checkLocationPermission()) {
+                    mGoogleMap.isMyLocationEnabled = true
+                    getCurrentLocation()
+                }
+            } else {
+                AlertDialog.Builder(this)
+                    .setTitle("Permission Denied")
+                    .setMessage("Location permission is required to display your location.")
+                    .setPositiveButton("OK", null)
+                    .create()
+                    .show()
             }
         }
     }
+}

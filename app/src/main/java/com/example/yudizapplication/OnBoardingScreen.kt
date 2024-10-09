@@ -18,6 +18,7 @@ import com.example.yudizapplication.Workmanager.WorkManagerSecondExample
 import com.example.yudizapplication.activity.FirstScreen
 import com.example.yudizapplication.coil.CoilExample
 import com.example.yudizapplication.coordinator.CoordinatorScreen
+import com.example.yudizapplication.dataBinding.DataBindingExample
 import com.example.yudizapplication.demo_app.DemoApplication
 import com.example.yudizapplication.dialog.AddUserScreen
 import com.example.yudizapplication.exp_menu.ContextScreen
@@ -70,7 +71,8 @@ class OnBoardingScreen : AppCompatActivity() {
        val btn_fcmExample = findViewById<Button>(R.id.btn_fcmExample)
        val btn_workmanager = findViewById<Button>(R.id.btn_workmanager)
        val switch_demo = findViewById<Switch>(R.id.demo_switch)
-        val btn_maps = findViewById<Button>(R.id.btn_maps)
+       val btn_maps = findViewById<Button>(R.id.btn_maps)
+       val btn_databinding = findViewById<Button>(R.id.btn_databinding)
 
         activity.setOnClickListener {
             intent = Intent(this, FirstScreen::class.java)
@@ -166,6 +168,10 @@ class OnBoardingScreen : AppCompatActivity() {
         }
         btn_workmanager.setOnClickListener {
             intent = Intent(this, WorkManagerSecondExample::class.java)
+            startActivity(intent)
+        }
+        btn_databinding.setOnClickListener {
+            intent = Intent(this, DataBindingExample::class.java)
             startActivity(intent)
         }
         switch_demo.setOnClickListener{

@@ -369,6 +369,19 @@
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 android:textStyle="bold" />
+            <Button
+                android:id="@+id/btn_databinding"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_maps"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_style"
+                android:hapticFeedbackEnabled="true"
+                android:text="26. Data Binding"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
     </ScrollView>
@@ -397,6 +410,4 @@
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/demo_switch"
         app:layout_constraintTop_toBottomOf="@id/demo_switch" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
